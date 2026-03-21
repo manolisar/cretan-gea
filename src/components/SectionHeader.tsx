@@ -14,24 +14,24 @@ export function SectionHeader({
   title,
   subtitle,
   className = "",
-  tagClassName = "text-earth",
+  tagClassName = "text-[#C9A84C]",
   titleClassName = "",
 }: SectionHeaderProps) {
   const uc = useUC();
   return (
     <div className={`max-w-[560px] mb-12 ${className}`}>
       <span
-        className={`inline-block text-[0.68rem] tracking-[0.3em] uppercase ${tagClassName} mb-4`}
+        className={`font-[family-name:var(--font-nav)] inline-block text-[0.68rem] tracking-[0.3em] uppercase ${tagClassName} mb-4`}
       >
         {uc(tag)}
       </span>
       <h2
-        className={`font-[family-name:var(--font-display)] text-[clamp(2rem,3.5vw,3rem)] font-normal leading-[1.2] mb-4 ${titleClassName}`}
+        className={`font-[family-name:var(--font-display)] text-[clamp(2rem,3.5vw,3rem)] font-normal leading-[1.2] mb-4 text-[#1A1A1A] ${titleClassName}`}
       >
         {title}
       </h2>
       {subtitle && (
-        <p className="text-base text-muted leading-[1.7]">{subtitle}</p>
+        <p className="font-[family-name:var(--font-sans)] text-[0.95rem] text-[#8A8075] leading-[1.7]">{subtitle}</p>
       )}
     </div>
   );

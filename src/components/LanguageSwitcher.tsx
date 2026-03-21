@@ -17,9 +17,9 @@ export function LanguageSwitcher({ locale, scrolled = true }: LanguageSwitcherPr
   return (
     <a
       href={routeHref(newPath)}
-      className={`text-[0.78rem] font-semibold tracking-[0.06em] uppercase py-1 px-3 rounded-sm transition-all duration-300 no-underline ${
+      className={`font-[family-name:var(--font-nav)] text-[0.7rem] font-medium tracking-[0.12em] uppercase py-1 px-3 transition-all duration-300 no-underline ${
         scrolled
-          ? "text-earth border border-earth/30 hover:bg-earth hover:text-warm-white"
+          ? "text-[#E2C87E] border border-[rgba(201,168,76,0.3)] hover:bg-[#C9A84C] hover:text-[#1A1A1A]"
           : "text-white/80 border border-white/40 hover:bg-white/20 hover:text-white"
       }`}
     >

@@ -44,10 +44,10 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
   return (
     <section
       id="workshops"
-      className="py-24 px-6 md:px-12 bg-cream relative"
+      className="py-24 px-6 md:px-12 bg-[#F9F5EE] relative"
       style={{
         borderTop: "1px solid transparent",
-        backgroundImage: "linear-gradient(to right, transparent, #8B6F47, transparent)",
+        backgroundImage: "linear-gradient(to right, transparent, #C9A84C, transparent)",
         backgroundSize: "100% 1px",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top",
@@ -73,7 +73,7 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
                   color: "inherit",
                   borderRadius: 8,
                   overflow: "hidden",
-                  background: "#FAF8F4",
+                  background: "#FFFCF5",
                   transition: "transform 0.35s, box-shadow 0.35s",
                 }}
                 className="hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(44,36,22,0.1)]"
@@ -95,7 +95,7 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
                       left: 12,
                       background: "rgba(44,36,22,0.8)",
                       backdropFilter: "blur(6px)",
-                      color: "#C5A55A",
+                      color: "#E2C87E",
                       fontSize: "0.72rem",
                       fontWeight: 600,
                       padding: "5px 10px",
@@ -108,13 +108,13 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
                 </div>
 
                 <div style={{ padding: "16px 18px 20px" }}>
-                  <h3 className="font-[family-name:var(--font-display)]" style={{ fontSize: "1.2rem", fontWeight: 600, marginBottom: 6, lineHeight: 1.25 }}>
+                  <h3 className="font-[family-name:var(--font-display)]" style={{ fontSize: "1.2rem", fontWeight: 500, marginBottom: 6, lineHeight: 1.25, color: "#1A1A1A" }}>
                     {workshop.name}
                   </h3>
                   <p
                     style={{
                       fontSize: "0.82rem",
-                      color: "#7A7263",
+                      color: "#3A3A3A",
                       lineHeight: 1.55,
                       marginBottom: 14,
                       display: "-webkit-box",
@@ -127,14 +127,15 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
                   </p>
                   <span
                     className="uppercase"
+                    className="uppercase font-[family-name:var(--font-nav)]"
                     style={{
                       display: "inline-flex",
                       alignItems: "center",
                       gap: 6,
-                      color: "#8B6F47",
-                      fontSize: "0.72rem",
+                      color: "#C9A84C",
+                      fontSize: "0.68rem",
                       fontWeight: 600,
-                      letterSpacing: "0.06em",
+                      letterSpacing: "0.12em",
                     }}
                   >
                     {uc(d.explore)}

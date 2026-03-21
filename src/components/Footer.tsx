@@ -37,7 +37,7 @@ export function Footer({ dict, locale }: FooterProps) {
 
         {/* Explore */}
         <div>
-          <h4 className="font-[family-name:var(--font-display)] text-[1.05rem] font-semibold text-warm-white mb-4">
+          <h4 className="font-[family-name:var(--font-nav)] text-[0.8rem] tracking-[0.15em] uppercase text-[#E2C87E] mb-4">
             {d.explore}
           </h4>
           <ul className="space-y-2">
@@ -61,7 +61,7 @@ export function Footer({ dict, locale }: FooterProps) {
 
         {/* Info */}
         <div>
-          <h4 className="font-[family-name:var(--font-display)] text-[1.05rem] font-semibold text-warm-white mb-4">
+          <h4 className="font-[family-name:var(--font-nav)] text-[0.8rem] tracking-[0.15em] uppercase text-[#E2C87E] mb-4">
             {d.info}
           </h4>
           <ul className="space-y-2">
@@ -80,7 +80,7 @@ export function Footer({ dict, locale }: FooterProps) {
 
         {/* Visit */}
         <div>
-          <h4 className="font-[family-name:var(--font-display)] text-[1.05rem] font-semibold text-warm-white mb-4">
+          <h4 className="font-[family-name:var(--font-nav)] text-[0.8rem] tracking-[0.15em] uppercase text-[#E2C87E] mb-4">
             {d.visitUs}
           </h4>
           <p className="text-[0.85rem] leading-[1.8]">

@@ -66,7 +66,7 @@ export function Activities({ dict, locale }: ActivitiesProps) {
                   color: "inherit",
                   borderRadius: 8,
                   overflow: "hidden",
-                  background: "#F5F0E8",
+                  background: "#F9F5EE",
                   transition: "transform 0.4s, box-shadow 0.4s",
                 }}
               >
@@ -106,14 +106,14 @@ export function Activities({ dict, locale }: ActivitiesProps) {
                   }}
                 >
                   {/* Gold accent line */}
-                  <div className="w-10 h-px bg-gold/60 mb-6" />
+                  <div className="w-10 h-[2px] bg-gradient-to-r from-[#C9A84C] to-[#E2C87E] mb-6" />
 
                   <span
-                    className="uppercase"
+                    className="font-[family-name:var(--font-nav)] uppercase"
                     style={{
                       fontSize: "0.65rem",
                       letterSpacing: "0.25em",
-                      color: "#5C6B3C",
+                      color: "#C9A84C",
                       marginBottom: 10,
                       display: "block",
                     }}
@@ -122,7 +122,7 @@ export function Activities({ dict, locale }: ActivitiesProps) {
                   </span>
                   <h3
                     className="font-[family-name:var(--font-display)]"
-                    style={{ fontSize: "2.2rem", fontWeight: 600, marginBottom: 14, lineHeight: 1.15 }}
+                    style={{ fontSize: "2.2rem", fontWeight: 500, marginBottom: 14, lineHeight: 1.15, color: "#1A1A1A" }}
                   >
                     {activity.name}
                   </h3>
@@ -130,35 +130,35 @@ export function Activities({ dict, locale }: ActivitiesProps) {
                   {content?.subtitle && (
                     <p
                       className="font-[family-name:var(--font-display)]"
-                      style={{ fontSize: "1.05rem", fontStyle: "italic", color: "#8B6F47", marginBottom: 18, lineHeight: 1.4 }}
+                      style={{ fontSize: "1.05rem", fontStyle: "italic", color: "#6B1D2A", marginBottom: 18, lineHeight: 1.4 }}
                     >
                       {content.subtitle}
                     </p>
                   )}
 
-                  <p style={{ fontSize: "0.9rem", color: "#7A7263", lineHeight: 1.75, marginBottom: 24 }}>
+                  <p style={{ fontSize: "0.9rem", color: "#3A3A3A", lineHeight: 1.75, marginBottom: 24 }}>
                     {activity.description}
                   </p>
 
                   <div style={{ display: "flex", gap: 20, marginBottom: 16, flexWrap: "wrap" }}>
-                    <span style={{ display: "flex", alignItems: "center", gap: 6, fontSize: "0.82rem", color: "#7A7263" }}>
-                      <Clock size={15} style={{ color: "#8B6F47" }} />
+                    <span style={{ display: "flex", alignItems: "center", gap: 6, fontSize: "0.82rem", color: "#8A8075" }}>
+                      <Clock size={15} style={{ color: "#C9A84C" }} />
                       {activity.duration}
                     </span>
-                    <span style={{ display: "flex", alignItems: "center", gap: 6, fontSize: "0.82rem", color: "#7A7263" }}>
-                      <Users size={15} style={{ color: "#8B6F47" }} />
+                    <span style={{ display: "flex", alignItems: "center", gap: 6, fontSize: "0.82rem", color: "#8A8075" }}>
+                      <Users size={15} style={{ color: "#C9A84C" }} />
                       {d.upTo} {activity.capacity} {d.guests}
                     </span>
                   </div>
 
-                  {/* Price — premium gold text */}
-                  <p className="text-gold text-[0.88rem] font-semibold tracking-[0.02em] mb-6">
+                  {/* Price — burgundy accent */}
+                  <p className="text-[#6B1D2A] text-[0.88rem] font-semibold tracking-[0.02em] mb-6">
                     {d.from} &euro;{activity.price}
                   </p>
 
                   {/* Discover link */}
                   <span
-                    className="inline-flex items-center gap-2 text-earth text-[0.8rem] font-semibold tracking-[0.06em] uppercase group-hover:gap-3 transition-all duration-300"
+                    className="font-[family-name:var(--font-nav)] inline-flex items-center gap-2 text-[#C9A84C] text-[0.75rem] font-semibold tracking-[0.12em] uppercase group-hover:gap-3 transition-all duration-300"
                   >
                     {uc(d.learnMore)}
                     <ArrowRight size={15} className="transition-transform duration-300" />

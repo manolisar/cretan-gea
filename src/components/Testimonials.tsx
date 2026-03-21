@@ -32,7 +32,7 @@ export function Testimonials({ dict, testimonials }: TestimonialsProps) {
       <div className="flex md:grid md:grid-cols-3 gap-6 max-w-[1100px] overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0">
         {testimonials.map((t, i) => (
           <ScrollReveal key={i} delay={i * 0.1}>
-            <div className="min-w-[300px] md:min-w-0 snap-center p-8 px-9 bg-warm-white rounded-[4px] border border-cream-dark/60 transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(44,36,22,0.08)] flex flex-col">
+            <div className="min-w-[300px] md:min-w-0 snap-center p-8 px-9 bg-[#FFFCF5] rounded-[4px] border border-[rgba(201,168,76,0.2)] transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] flex flex-col">
               {/* Large decorative quote mark */}
               <span
                 className="font-[family-name:var(--font-display)] text-gold/30 text-[3rem] leading-none -mb-2 block select-none"

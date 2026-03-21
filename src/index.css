@@ -1,18 +1,29 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-earth: #8B6F47;
+  --color-earth: #8B7332;
   --color-earth-dark: #6B5535;
   --color-olive: #5C6B3C;
-  --color-cream: #F5F0E8;
-  --color-cream-dark: #E8DFD0;
-  --color-dark: #2C2416;
-  --color-warm-white: #FAF8F4;
-  --color-gold: #C5A55A;
-  --color-muted: #7A7263;
+  --color-cream: #F5EDDA;
+  --color-cream-dark: #EDE5D5;
+  --color-dark: #1A1A1A;
+  --color-warm-white: #FFFCF5;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E2C87E;
+  --color-gold-pale: #F5EDDA;
+  --color-burgundy: #6B1D2A;
+  --color-burgundy-light: #8C2D3E;
+  --color-burgundy-deep: #4A0E1A;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-soft: #3A3A3A;
+  --color-warm-gray: #8A8075;
+  --color-parchment: #F9F5EE;
+  --color-muted: #8A8075;
 
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body: "DM Sans", -apple-system, sans-serif;
+  --font-display: "Cinzel", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Noto Serif", Georgia, serif;
+  --font-nav: "Cinzel", serif;
+  --font-sans: "Noto Sans", sans-serif;
 }
 
 html {
@@ -23,11 +34,11 @@ html {
 /* Greek locale font overrides — applied via document.documentElement.lang = "el" */
 html[lang="el"] {
   --font-display: "Literata", Georgia, serif;
-  --font-body: "Source Sans 3", sans-serif;
+  --font-body: "Noto Serif", Georgia, serif;
 }
 
 html[lang="el"] body {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Noto Serif", Georgia, serif;
 }
 
 html[lang="el"] h1,
@@ -38,7 +49,7 @@ html[lang="el"] h3 {
 }
 
 html[lang="el"] .hero-title {
-  font-size: clamp(1.6rem, 3vw, 2.6rem) !important;
+  font-size: clamp(2.2rem, 4.2vw, 3.8rem) !important;
 }
 
 /* Greek uppercase: disable CSS text-transform so JS greekUpperCase() handles it.
@@ -49,7 +60,7 @@ html[lang="el"] .uppercase {
 
 body {
   font-family: var(--font-body);
-  color: var(--color-dark);
+  color: var(--color-charcoal);
   background: var(--color-warm-white);
   -webkit-font-smoothing: antialiased;
 }
@@ -150,7 +161,7 @@ body::after {
   content: "";
   flex: 0 0 60px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(197,165,90,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
 }
 
 .olive-divider svg {

@@ -12,7 +12,7 @@ export function OurStory({ dict }: OurStoryProps) {
   const uc = useUC();
 
   return (
-    <section id="our-story" className="py-24 px-6 md:px-12 bg-warm-white">
+    <section id="our-story" className="py-24 px-6 md:px-12 bg-[#FFFCF5]">
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Image with offset gold border */}
         <ScrollReveal className="relative">
@@ -25,8 +25,8 @@ export function OurStory({ dict }: OurStoryProps) {
             {/* Image container */}
             <div className="relative overflow-hidden" style={{ zIndex: 1 }}>
               <img
-                src={asset("/images/About-us-Photo22.12.25.png")}
-                alt="Cretan Gea — Our Story"
+                src={asset("/images/cooking-1-1.webp")}
+                alt="Cretan Gea — Cooking experience with guests"
                 className="w-full h-auto object-cover"
                 style={{ minHeight: 400, maxHeight: 560 }}
               />
@@ -40,22 +40,22 @@ export function OurStory({ dict }: OurStoryProps) {
         <ScrollReveal delay={0.2}>
           <div>
             {/* Tag */}
-            <span className="text-[0.65rem] tracking-[0.3em] uppercase text-olive font-medium mb-4 block">
+            <span className="font-[family-name:var(--font-nav)] text-[0.65rem] tracking-[0.3em] uppercase text-[#C9A84C] font-medium mb-4 block">
               {uc(s.tag)}
             </span>
 
             {/* Title */}
             <h2
-              className="font-[family-name:var(--font-display)] text-[clamp(1.8rem,3vw,2.6rem)] font-light text-dark leading-[1.2] mb-8"
+              className="font-[family-name:var(--font-display)] text-[clamp(1.8rem,3vw,2.6rem)] font-light text-[#1A1A1A] leading-[1.2] mb-8"
             >
               {s.title}
             </h2>
 
             {/* Body paragraphs */}
-            <p className="text-[0.95rem] text-muted leading-[1.8] mb-5">
+            <p className="text-[0.95rem] text-[#3A3A3A] leading-[1.8] mb-5">
               {s.p1}
             </p>
-            <p className="text-[0.95rem] text-muted leading-[1.8] mb-10">
+            <p className="text-[0.95rem] text-[#3A3A3A] leading-[1.8] mb-10">
               {s.p2}
             </p>
 

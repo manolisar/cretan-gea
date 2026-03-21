@@ -7,11 +7,11 @@ import type { Dictionary } from "@/lib/i18n/en";
 
 /* Photo path + earthy back-card color per member (order must match dictionary) */
 const MEMBER_DATA = [
-  { photo: asset("/images/team-eleni.jpg"), color: "#5C6B3C" },      // Eleni — olive
-  { photo: asset("/images/team-maria.webp"), color: "#8B6F47" },     // Maria — earth
-  { photo: asset("/images/team-stamatis.jpg"), color: "#9C3536" },   // Stamatis — terracotta
-  { photo: asset("/images/team-marianda.jpg"), color: "#C5A55A" },   // Marianda — gold
-  { photo: asset("/images/team-aggelina.webp"), color: "#5C6B3C" },  // Aggelina — olive
+  { photo: asset("/images/team-eleni.jpg"), color: "#6B1D2A" },      // Eleni — burgundy
+  { photo: asset("/images/team-maria.webp"), color: "#8B7332" },     // Maria — gold-dark
+  { photo: asset("/images/team-stamatis.jpg"), color: "#4A0E1A" },   // Stamatis — burgundy deep
+  { photo: asset("/images/team-marianda.jpg"), color: "#C9A84C" },   // Marianda — gold
+  { photo: asset("/images/team-aggelina.webp"), color: "#6B1D2A" },  // Aggelina — burgundy
 ];
 
 export function AboutTeam({ dict }: { dict: Dictionary }) {
@@ -20,7 +20,7 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
   const [flipped, setFlipped] = useState<number | null>(null);
 
   return (
-    <section id="about-team" className="py-24 px-6 md:px-12 bg-cream">
+    <section id="about-team" className="py-24 px-6 md:px-12 bg-[#F9F5EE]">
       <div className="max-w-[1100px] mx-auto">
         <ScrollReveal>
           <SectionHeader tag={t.tag} title={t.title} />
@@ -71,13 +71,13 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
                       className="absolute inset-0 rounded-lg flex flex-col items-center justify-center text-center p-6"
                       style={{
                         backfaceVisibility: "hidden",
-                        background: "#FAF8F4",
-                        border: "1px solid #E8DFD0",
+                        background: "#FFFCF5",
+                        border: "1px solid rgba(201,168,76,0.2)",
                       }}
                     >
                       {/* Photo circle */}
                       <div
-                        className="w-28 h-28 rounded-full overflow-hidden mb-5 border-2 border-gold/30 transition-transform duration-300 group-hover:scale-110 group-hover:border-gold/60"
+                        className="w-28 h-28 rounded-full overflow-hidden mb-5 border-2 border-[rgba(201,168,76,0.3)] transition-transform duration-300 group-hover:scale-110 group-hover:border-[rgba(201,168,76,0.6)]"
                         style={{ flexShrink: 0 }}
                       >
                         <img
@@ -86,14 +86,14 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
                           className="w-full h-full object-cover object-top"
                         />
                       </div>
-                      <h3 className="font-[family-name:var(--font-display)] text-[1.3rem] font-semibold text-dark mb-1">
+                      <h3 className="font-[family-name:var(--font-display)] text-[1.3rem] font-semibold text-[#1A1A1A] mb-1">
                         {member.name}
                       </h3>
-                      <p className="uppercase text-[0.68rem] tracking-[0.2em] text-muted mb-3">
+                      <p className="font-[family-name:var(--font-nav)] uppercase text-[0.62rem] tracking-[0.2em] text-[#C9A84C] mb-3">
                         {uc(member.role)}
                       </p>
                       {/* Hint to flip */}
-                      <span className="text-[0.65rem] text-earth/40 italic transition-colors duration-300 group-hover:text-earth/70">
+                      <span className="text-[0.65rem] text-[rgba(201,168,76,0.4)] italic transition-colors duration-300 group-hover:text-[rgba(201,168,76,0.7)]">
                         &#x21bb;
                       </span>
                     </div>
