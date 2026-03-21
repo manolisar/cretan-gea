@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Activity {
+  id          String    @id @default(cuid())
+  name        String
+  type        String    // "activity" or "workshop"
+  description String
+  price       Float
+  capacity    Int       @default(10)
+  duration    String    @default("3 hours")
+  imageUrl    String    @default("")
+  active      Boolean   @default(true)
+  sortOrder   Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  bookings    Booking[]
+}
+
+model Booking {
+  id            String   @id @default(cuid())
+  guestName     String
+  guestEmail    String   @default("")
+  guestPhone    String   @default("")
+  guestCount    Int      @default(1)
+  childrenFree  Int      @default(0)  // Under 6: free
+  childrenHalf  Int      @default(0)  // Ages 6–12: 50% discount
+  date          DateTime
+  notes         String   @default("")
+  status        String   @default("confirmed") // confirmed | completed | cancelled
+  paymentStatus String   @default("pending")   // pending | paid | partially_paid | refunded
+  totalAmount   Float    @default(0)
+  paidAmount    Float    @default(0)
+  activityId    String
+  activity      Activity @relation(fields: [activityId], references: [id])
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Expense {
+  id          String   @id @default(cuid())
+  category    String
+  description String
+  amount      Float
+  date        DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Settings {
+  key   String @id
+  value String
+}
