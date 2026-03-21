@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
+import { hasBackend } from "@/utils/api";
 import {
   format,
   startOfMonth,
@@ -49,6 +50,7 @@ export function AvailabilityCalendar({ dict }: { dict: Dictionary }) {
   const d = dict.calendar;
 
   useEffect(() => {
+    if (!hasBackend()) return;
     fetch("/api/availability")
       .then((r) => r.json())
       .then((data: { availability: AvailabilityMap; activities: Activity[] }) => {

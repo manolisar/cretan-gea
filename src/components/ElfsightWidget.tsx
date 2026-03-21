@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { hasBackend } from "@/utils/api";
 import { useUC } from "@/hooks/useGreekUpperCase";
 import type { Dictionary } from "@/lib/i18n/en";
 
@@ -13,6 +14,7 @@ export function ElfsightWidget({ dict }: { dict: Dictionary }) {
   }>({ tripadvisor: "", facebook: "", instagram: "" });
 
   useEffect(() => {
+    if (!hasBackend()) return;
     fetch("/api/settings")
       .then((r) => r.json())
       .then((data: Record<string, string>) => {
