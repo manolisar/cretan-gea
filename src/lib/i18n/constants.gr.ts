@@ -67,12 +67,12 @@ export const LOCAL_AREA_LINKS_GR = [
     description: "Ολοκληρωμένη τουριστική πύλη Κρήτης",
   },
   {
-    name: "Visit Chania",
+    name: "Επισκεφθείτε τα Χανιά",
     url: "https://visitchania.gr",
     description: "Οδηγός επισκέπτη Χανίων",
   },
   {
-    name: "Cretan Beaches",
+    name: "Κρητικές Παραλίες",
     url: "https://www.cretanbeaches.com",
     description: "Οδηγός για τις καλύτερες παραλίες της Κρήτης",
   },
