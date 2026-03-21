@@ -126,7 +126,6 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
                     {workshop.description}
                   </p>
                   <span
-                    className="uppercase"
                     className="uppercase font-[family-name:var(--font-nav)]"
                     style={{
                       display: "inline-flex",
