@@ -9,7 +9,7 @@ interface TestimonialsProps {
 
 export function Testimonials({ dict, testimonials }: TestimonialsProps) {
   return (
-    <section id="testimonials" className="py-24 px-6 md:px-12 bg-warm-white relative overflow-hidden">
+    <section id="testimonials" className="py-24 px-6 md:px-12 bg-warm-white relative overflow-hidden paper-grain">
       {/* Background decorative quotation mark */}
       <div className="absolute top-16 right-8 md:right-24 pointer-events-none select-none">
         <span

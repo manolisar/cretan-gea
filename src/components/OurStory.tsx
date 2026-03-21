@@ -12,7 +12,7 @@ export function OurStory({ dict }: OurStoryProps) {
   const uc = useUC();
 
   return (
-    <section id="our-story" className="py-24 px-6 md:px-12 bg-[#FFFCF5]">
+    <section id="our-story" className="py-24 px-6 md:px-12 bg-[#FFFCF5] paper-grain">
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Image with offset gold border */}
         <ScrollReveal className="relative">

@@ -44,7 +44,7 @@ export function Activities({ dict, locale }: ActivitiesProps) {
   const uc = useUC();
 
   return (
-    <section id="activities" className="py-24 px-6 md:px-12 bg-warm-white">
+    <section id="activities" className="py-24 px-6 md:px-12 bg-warm-white paper-grain">
       <ScrollReveal>
         <SectionHeader tag={d.tag} title={d.title} subtitle={d.subtitle} />
       </ScrollReveal>

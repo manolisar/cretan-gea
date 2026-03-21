@@ -44,7 +44,7 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
   return (
     <section
       id="workshops"
-      className="py-24 px-6 md:px-12 bg-[#F9F5EE] relative"
+      className="py-24 px-6 md:px-12 bg-[#F9F5EE] relative paper-grain"
       style={{
         borderTop: "1px solid transparent",
         backgroundImage: "linear-gradient(to right, transparent, #C9A84C, transparent)",

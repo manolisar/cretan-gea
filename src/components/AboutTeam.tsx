@@ -20,7 +20,7 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
   const [flipped, setFlipped] = useState<number | null>(null);
 
   return (
-    <section id="about-team" className="py-24 px-6 md:px-12 bg-[#F9F5EE]">
+    <section id="about-team" className="py-24 px-6 md:px-12 bg-[#F9F5EE] paper-grain">
       <div className="max-w-[1100px] mx-auto">
         <ScrollReveal>
           <SectionHeader tag={t.tag} title={t.title} />

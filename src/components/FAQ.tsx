@@ -14,7 +14,7 @@ export function FAQ({ dict, faqItems }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 px-6 md:px-12 bg-[#F9F5EE]">
+    <section id="faq" className="py-24 px-6 md:px-12 bg-[#F9F5EE] paper-grain">
       <ScrollReveal>
         <SectionHeader tag={dict.faq.tag} title={dict.faq.title} />
       </ScrollReveal>
