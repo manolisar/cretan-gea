@@ -10,6 +10,7 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 import { CONTACT, SITE } from "@/lib/constants";
 import { ACTIVITY_CONTENT } from "@/lib/activity-content";
 import { ACTIVITY_CONTENT_GR } from "@/lib/i18n/activity-content.gr";
+import { STATIC_ACTIVITIES } from "@/lib/static-data";
 import { LocaleProvider } from "@/contexts/LocaleContext";
 import { greekUpperCase } from "@/utils/greekUpperCase";
 import { Navbar } from "@/components/Navbar";
@@ -43,17 +44,24 @@ export default function ActivityDetail() {
     if (!id) return;
     fetch(`/api/activities/${id}`)
       .then((r) => {
-        if (!r.ok) { setNotFound(true); setLoading(false); return null; }
+        if (!r.ok) throw new Error("Not found");
         return r.json();
       })
       .then((data) => {
-        if (data) {
-          if (!data.active) { setNotFound(true); }
-          else { setActivity(data); }
-          setLoading(false);
-        }
+        if (data && data.active !== false) { setActivity(data); }
+        else { setNotFound(true); }
+        setLoading(false);
       })
-      .catch(() => { setNotFound(true); setLoading(false); });
+      .catch(() => {
+        // Fallback to static data
+        const staticItem = STATIC_ACTIVITIES.find((a) => a.id === id);
+        if (staticItem) {
+          setActivity({ ...staticItem, active: true });
+        } else {
+          setNotFound(true);
+        }
+        setLoading(false);
+      });
   }, [id]);
 
   if (!isValidLocale(locale)) return <Navigate to="/en" replace />;

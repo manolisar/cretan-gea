@@ -4,6 +4,7 @@ import { SectionHeader } from "./SectionHeader";
 import { ScrollReveal } from "./ScrollReveal";
 import { ACTIVITY_CONTENT } from "@/lib/activity-content";
 import { ACTIVITY_CONTENT_GR } from "@/lib/i18n/activity-content.gr";
+import { STATIC_ACTIVITIES } from "@/lib/static-data";
 import { useUC } from "@/hooks/useGreekUpperCase";
 import type { Dictionary } from "@/lib/i18n/en";
 
@@ -22,12 +23,17 @@ interface WorkshopsProps {
 }
 
 export function Workshops({ dict, locale }: WorkshopsProps) {
-  const [workshops, setWorkshops] = useState<Workshop[]>([]);
+  const [workshops, setWorkshops] = useState<Workshop[]>(
+    STATIC_ACTIVITIES.filter((a) => a.type === "workshop")
+  );
 
   useEffect(() => {
     fetch("/api/activities")
       .then((r) => r.json())
-      .then((data: Workshop[]) => setWorkshops(data.filter((a) => a.type === "workshop")));
+      .then((data: Workshop[]) => {
+        if (Array.isArray(data)) setWorkshops(data.filter((a) => a.type === "workshop"));
+      })
+      .catch(() => {/* use static fallback */});
   }, []);
 
   const contentMap = locale === "gr" ? ACTIVITY_CONTENT_GR : ACTIVITY_CONTENT;

@@ -4,6 +4,7 @@ import { SectionHeader } from "./SectionHeader";
 import { ScrollReveal } from "./ScrollReveal";
 import { ACTIVITY_CONTENT } from "@/lib/activity-content";
 import { ACTIVITY_CONTENT_GR } from "@/lib/i18n/activity-content.gr";
+import { STATIC_ACTIVITIES } from "@/lib/static-data";
 import { useUC } from "@/hooks/useGreekUpperCase";
 import type { Dictionary } from "@/lib/i18n/en";
 
@@ -24,12 +25,17 @@ interface ActivitiesProps {
 }
 
 export function Activities({ dict, locale }: ActivitiesProps) {
-  const [activities, setActivities] = useState<Activity[]>([]);
+  const [activities, setActivities] = useState<Activity[]>(
+    STATIC_ACTIVITIES.filter((a) => a.type === "activity")
+  );
 
   useEffect(() => {
     fetch("/api/activities")
       .then((r) => r.json())
-      .then((data: Activity[]) => setActivities(data.filter((a) => a.type === "activity")));
+      .then((data: Activity[]) => {
+        if (Array.isArray(data)) setActivities(data.filter((a) => a.type === "activity"));
+      })
+      .catch(() => {/* use static fallback */});
   }, []);
 
   const contentMap = locale === "gr" ? ACTIVITY_CONTENT_GR : ACTIVITY_CONTENT;

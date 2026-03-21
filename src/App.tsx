@@ -19,7 +19,7 @@ const Settings = lazy(() => import("./pages/admin/Settings"));
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Suspense fallback={null}>
         <Routes>
           {/* Root redirect */}
