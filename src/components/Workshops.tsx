@@ -5,6 +5,7 @@ import { ScrollReveal } from "./ScrollReveal";
 import { ACTIVITY_CONTENT } from "@/lib/activity-content";
 import { ACTIVITY_CONTENT_GR } from "@/lib/i18n/activity-content.gr";
 import { STATIC_ACTIVITIES } from "@/lib/static-data";
+import { routeHref } from "@/utils/assetUrl";
 import { useUC } from "@/hooks/useGreekUpperCase";
 import type { Dictionary } from "@/lib/i18n/en";
 
@@ -65,7 +66,7 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
           return (
             <ScrollReveal key={workshop.id} delay={(i % 5) * 0.08}>
               <a
-                href={`/${locale}/activities/${workshop.id}`}
+                href={routeHref(`/${locale}/activities/${workshop.id}`)}
                 style={{
                   display: "block",
                   textDecoration: "none",

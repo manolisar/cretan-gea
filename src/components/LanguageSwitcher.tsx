@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { routeHref } from "@/utils/assetUrl";
 
 interface LanguageSwitcherProps {
   locale: string;
@@ -15,7 +16,7 @@ export function LanguageSwitcher({ locale, scrolled = true }: LanguageSwitcherPr
 
   return (
     <a
-      href={newPath}
+      href={routeHref(newPath)}
       className={`text-[0.78rem] font-semibold tracking-[0.06em] uppercase py-1 px-3 rounded-sm transition-all duration-300 no-underline ${
         scrolled
           ? "text-earth border border-earth/30 hover:bg-earth hover:text-warm-white"

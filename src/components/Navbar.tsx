@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { IMAGES, CONTACT } from "@/lib/constants";
+import { routeHref } from "@/utils/assetUrl";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useUC } from "@/hooks/useGreekUpperCase";
 import type { Dictionary } from "@/lib/i18n/en";
@@ -18,12 +19,12 @@ export function Navbar({ dict, locale }: NavbarProps) {
   const uc = useUC();
 
   const navLinks = [
-    { href: `/${locale}/#activities`, label: dict.nav.activities },
-    { href: `/${locale}/#workshops`, label: dict.nav.workshops },
-    { href: `/${locale}/#gallery`, label: dict.nav.gallery },
-    { href: `/${locale}/#testimonials`, label: dict.nav.reviews },
-    { href: `/${locale}/#faq`, label: dict.nav.faq },
-    { href: `/${locale}/#contact`, label: dict.nav.contact },
+    { href: routeHref(`/${locale}/#activities`), label: dict.nav.activities },
+    { href: routeHref(`/${locale}/#workshops`), label: dict.nav.workshops },
+    { href: routeHref(`/${locale}/#gallery`), label: dict.nav.gallery },
+    { href: routeHref(`/${locale}/#testimonials`), label: dict.nav.reviews },
+    { href: routeHref(`/${locale}/#faq`), label: dict.nav.faq },
+    { href: routeHref(`/${locale}/#contact`), label: dict.nav.contact },
   ];
 
   useEffect(() => {
@@ -40,7 +41,7 @@ export function Navbar({ dict, locale }: NavbarProps) {
           : "py-5 px-6 md:px-12 bg-transparent border-b border-transparent"
       }`}
     >
-      <a href={`/${locale}`}>
+      <a href={routeHref(`/${locale}`)}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={IMAGES.logo}

@@ -5,6 +5,7 @@ import { ScrollReveal } from "./ScrollReveal";
 import { ACTIVITY_CONTENT } from "@/lib/activity-content";
 import { ACTIVITY_CONTENT_GR } from "@/lib/i18n/activity-content.gr";
 import { STATIC_ACTIVITIES } from "@/lib/static-data";
+import { routeHref } from "@/utils/assetUrl";
 import { useUC } from "@/hooks/useGreekUpperCase";
 import type { Dictionary } from "@/lib/i18n/en";
 
@@ -56,7 +57,7 @@ export function Activities({ dict, locale }: ActivitiesProps) {
           return (
             <ScrollReveal key={activity.id} delay={i * 0.15}>
               <a
-                href={`/${locale}/activities/${activity.id}`}
+                href={routeHref(`/${locale}/activities/${activity.id}`)}
                 className="activity-card group hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(44,36,22,0.12)]"
                 style={{
                   display: "grid",

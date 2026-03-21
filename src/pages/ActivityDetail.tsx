@@ -11,6 +11,7 @@ import { CONTACT, SITE } from "@/lib/constants";
 import { ACTIVITY_CONTENT } from "@/lib/activity-content";
 import { ACTIVITY_CONTENT_GR } from "@/lib/i18n/activity-content.gr";
 import { STATIC_ACTIVITIES } from "@/lib/static-data";
+import { routeHref } from "@/utils/assetUrl";
 import { LocaleProvider } from "@/contexts/LocaleContext";
 import { greekUpperCase } from "@/utils/greekUpperCase";
 import { Navbar } from "@/components/Navbar";
@@ -92,7 +93,7 @@ export default function ActivityDetail() {
         }}
       >
         <a
-          href={`/${locale}`}
+          href={routeHref(`/${locale}`)}
           style={{ position: "absolute", top: 96, left: 24, zIndex: 10, display: "inline-flex", alignItems: "center", gap: 8, color: "rgba(255,255,255,0.7)", fontSize: "0.875rem", textDecoration: "none" }}
         >
           <ArrowLeft size={16} />

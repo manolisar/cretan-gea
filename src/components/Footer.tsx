@@ -1,4 +1,5 @@
 import { IMAGES, SITE, SOCIAL } from "@/lib/constants";
+import { routeHref } from "@/utils/assetUrl";
 import { Facebook, Instagram, ChevronUp } from "lucide-react";
 import type { Dictionary } from "@/lib/i18n/en";
 
@@ -41,17 +42,17 @@ export function Footer({ dict, locale }: FooterProps) {
           </h4>
           <ul className="space-y-2">
             <li>
-              <a href={`/${locale}/#activities`} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
+              <a href={routeHref(`/${locale}/#activities`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
                 {d.cooking}
               </a>
             </li>
             <li>
-              <a href={`/${locale}/#activities`} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
+              <a href={routeHref(`/${locale}/#activities`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
                 {d.ceramics}
               </a>
             </li>
             <li>
-              <a href={`/${locale}/#workshops`} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
+              <a href={routeHref(`/${locale}/#workshops`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
                 {d.workshops}
               </a>
             </li>
@@ -65,12 +66,12 @@ export function Footer({ dict, locale }: FooterProps) {
           </h4>
           <ul className="space-y-2">
             <li>
-              <a href={`/${locale}/#faq`} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
+              <a href={routeHref(`/${locale}/#faq`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
                 {d.faq}
               </a>
             </li>
             <li>
-              <a href={`/${locale}/#contact`} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
+              <a href={routeHref(`/${locale}/#contact`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
                 {d.contact}
               </a>
             </li>
