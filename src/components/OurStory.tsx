@@ -1,3 +1,4 @@
+import { asset } from "@/utils/assetUrl";
 import { ScrollReveal } from "./ScrollReveal";
 import { useUC } from "@/hooks/useGreekUpperCase";
 import type { Dictionary } from "@/lib/i18n/en";
@@ -24,7 +25,7 @@ export function OurStory({ dict }: OurStoryProps) {
             {/* Image container */}
             <div className="relative overflow-hidden" style={{ zIndex: 1 }}>
               <img
-                src="/images/About-us-Photo22.12.25.png"
+                src={asset("/images/About-us-Photo22.12.25.png")}
                 alt="Cretan Gea — Our Story"
                 className="w-full h-auto object-cover"
                 style={{ minHeight: 400, maxHeight: 560 }}

@@ -1,3 +1,4 @@
+import { asset } from "@/utils/assetUrl";
 import { useState } from "react";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionHeader } from "./SectionHeader";
@@ -6,11 +7,11 @@ import type { Dictionary } from "@/lib/i18n/en";
 
 /* Photo path + earthy back-card color per member (order must match dictionary) */
 const MEMBER_DATA = [
-  { photo: "/images/team-eleni.jpg", color: "#5C6B3C" },      // Eleni — olive
-  { photo: "/images/team-maria.webp", color: "#8B6F47" },     // Maria — earth
-  { photo: "/images/team-stamatis.jpg", color: "#9C3536" },   // Stamatis — terracotta
-  { photo: "/images/team-marianda.jpg", color: "#C5A55A" },   // Marianda — gold
-  { photo: "/images/team-aggelina.webp", color: "#5C6B3C" },  // Aggelina — olive
+  { photo: asset("/images/team-eleni.jpg"), color: "#5C6B3C" },      // Eleni — olive
+  { photo: asset("/images/team-maria.webp"), color: "#8B6F47" },     // Maria — earth
+  { photo: asset("/images/team-stamatis.jpg"), color: "#9C3536" },   // Stamatis — terracotta
+  { photo: asset("/images/team-marianda.jpg"), color: "#C5A55A" },   // Marianda — gold
+  { photo: asset("/images/team-aggelina.webp"), color: "#5C6B3C" },  // Aggelina — olive
 ];
 
 export function AboutTeam({ dict }: { dict: Dictionary }) {
@@ -36,7 +37,7 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
             <div className="relative">
               <div className="absolute -top-3 -right-3 w-full h-full border border-gold/30 pointer-events-none" style={{ zIndex: 0 }} />
               <img
-                src="/images/About-us-Photo22.12.25.png"
+                src={asset("/images/About-us-Photo22.12.25.png")}
                 alt="The Cretan Gea Team"
                 className="relative w-full h-auto object-cover shadow-lg"
                 style={{ zIndex: 1, maxHeight: 400 }}

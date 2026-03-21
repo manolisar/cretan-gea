@@ -1,3 +1,5 @@
+import { asset } from "@/utils/assetUrl";
+
 export interface ActivityContent {
   subtitle?: string;
   heroImage: string;
@@ -20,18 +22,18 @@ export interface ActivityContent {
 export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
   cooking: {
     subtitle: "A Journey Through Centuries of Cretan Food History",
-    heroImage: "/images/Cooking-21.png",
+    heroImage: asset("/images/Cooking-21.png"),
     gallery: [
       {
-        src: "/images/Cooking-21.png",
+        src: asset("/images/Cooking-21.png"),
         alt: "Cretan cooking class at Cretan Gea",
       },
       {
-        src: "/images/IMG_7049-copy-1.png",
+        src: asset("/images/IMG_7049-copy-1.png"),
         alt: "Traditional cooking experience",
       },
       {
-        src: "/images/2L1A7095-scaled-1.png",
+        src: asset("/images/2L1A7095-scaled-1.png"),
         alt: "Outdoor Cretan cooking in the countryside",
       },
     ],
@@ -126,22 +128,22 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   ceramics: {
     subtitle: "Connect with the Ancient Minoan Art of Pottery",
-    heroImage: "/images/Ceramics-2.webp",
+    heroImage: asset("/images/Ceramics-2.webp"),
     gallery: [
       {
-        src: "/images/Ceramics-2.webp",
+        src: asset("/images/Ceramics-2.webp"),
         alt: "Ceramics workshop at Cretan Gea",
       },
       {
-        src: "/images/IMG_1493-copy-3-scaled.webp",
+        src: asset("/images/IMG_1493-copy-3-scaled.webp"),
         alt: "Hands shaping clay — ceramics experience",
       },
       {
-        src: "/images/Ceramics-3.webp",
+        src: asset("/images/Ceramics-3.webp"),
         alt: "Cretan pottery wheel session",
       },
       {
-        src: "/images/Ceramics-4.webp",
+        src: asset("/images/Ceramics-4.webp"),
         alt: "Finished ceramic pieces",
       },
     ],
@@ -168,10 +170,10 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   "olive-oil": {
     subtitle: "Discover the Secrets of the Cretan Land!",
-    heroImage: "/images/1736598868263-1.png",
+    heroImage: asset("/images/1736598868263-1.png"),
     gallery: [
       {
-        src: "/images/1736598868263-1.png",
+        src: asset("/images/1736598868263-1.png"),
         alt: "Cretan olive oil workshop",
       },
     ],
@@ -209,14 +211,14 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   vineyard: {
     subtitle: "Explore Cretan Vineyards and Winemaking",
-    heroImage: "/images/grapes.jpg",
+    heroImage: asset("/images/grapes.jpg"),
     gallery: [
       {
-        src: "/images/grapes.jpg",
+        src: asset("/images/grapes.jpg"),
         alt: "Cretan grapes on the vine",
       },
       {
-        src: "/images/c18.jpg",
+        src: asset("/images/c18.jpg"),
         alt: "Vineyard landscape in Crete",
       },
     ],
@@ -232,18 +234,18 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   cheese: {
     subtitle: "The Art of Traditional Cretan Cheese-Making",
-    heroImage: "/images/Turi-copy-scaled.webp",
+    heroImage: asset("/images/Turi-copy-scaled.webp"),
     gallery: [
       {
-        src: "/images/Turi-copy-scaled.webp",
+        src: asset("/images/Turi-copy-scaled.webp"),
         alt: "Traditional Cretan cheese",
       },
       {
-        src: "/images/IMG_7609-769x1024.jpg",
+        src: asset("/images/IMG_7609-769x1024.jpg"),
         alt: "Cheese-making workshop at Cretan Gea",
       },
       {
-        src: "/images/IMG_7611-768x1024.jpg",
+        src: asset("/images/IMG_7611-768x1024.jpg"),
         alt: "Hands-on cheese production experience",
       },
     ],
@@ -259,14 +261,14 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   honey: {
     subtitle: "The Golden Treasure of Cretan Mountains",
-    heroImage: "/images/1736599008832.jpg",
+    heroImage: asset("/images/1736599008832.jpg"),
     gallery: [
       {
-        src: "/images/1736599008832.jpg",
+        src: asset("/images/1736599008832.jpg"),
         alt: "Cretan honey workshop",
       },
       {
-        src: "/images/1736600704081.jpeg",
+        src: asset("/images/1736600704081.jpeg"),
         alt: "Honey production in Crete",
       },
     ],
@@ -282,18 +284,18 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   soap: {
     subtitle: "Handcrafted with Pure Cretan Olive Oil",
-    heroImage: "/images/SAPOYNI-2-769x1024-1.jpeg",
+    heroImage: asset("/images/SAPOYNI-2-769x1024-1.jpeg"),
     gallery: [
       {
-        src: "/images/SAPOYNI-2-769x1024-1.jpeg",
+        src: asset("/images/SAPOYNI-2-769x1024-1.jpeg"),
         alt: "Handmade Cretan olive oil soap",
       },
       {
-        src: "/images/sapoyni-4.jpeg",
+        src: asset("/images/sapoyni-4.jpeg"),
         alt: "Natural soap bars",
       },
       {
-        src: "/images/SAPOYNI-1024x576-1.jpeg",
+        src: asset("/images/SAPOYNI-1024x576-1.jpeg"),
         alt: "Soap-making workshop at Cretan Gea",
       },
     ],
@@ -309,14 +311,14 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   sweets: {
     subtitle: "Traditional Cretan Fruit Preserves & Spoon Sweets",
-    heroImage: "/images/spoon-sweets-2-768x1024-1.jpg",
+    heroImage: asset("/images/spoon-sweets-2-768x1024-1.jpg"),
     gallery: [
       {
-        src: "/images/spoon-sweets-2-768x1024-1.jpg",
+        src: asset("/images/spoon-sweets-2-768x1024-1.jpg"),
         alt: "Traditional Cretan spoon sweets",
       },
       {
-        src: "/images/sfakiani-pita-12-1024x768-1.jpg",
+        src: asset("/images/sfakiani-pita-12-1024x768-1.jpg"),
         alt: "Traditional Cretan sweets workshop",
       },
     ],
@@ -332,18 +334,18 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   "sfakian-pie": {
     subtitle: "Master the Famous Sfakian Cheese Pie",
-    heroImage: "/images/sfakiani-pita-8-768x1024-1.jpg",
+    heroImage: asset("/images/sfakiani-pita-8-768x1024-1.jpg"),
     gallery: [
       {
-        src: "/images/sfakiani-pita-8-768x1024-1.jpg",
+        src: asset("/images/sfakiani-pita-8-768x1024-1.jpg"),
         alt: "Traditional Sfakian cheese pie",
       },
       {
-        src: "/images/sfakiani-pita-9-768x1024-1.jpg",
+        src: asset("/images/sfakiani-pita-9-768x1024-1.jpg"),
         alt: "Sfakian pie being prepared",
       },
       {
-        src: "/images/IMG_0873-768x1024-1.jpg",
+        src: asset("/images/IMG_0873-768x1024-1.jpg"),
         alt: "Sfakian pie workshop at Cretan Gea",
       },
     ],
@@ -359,18 +361,18 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   greens: {
     subtitle: "Forage & Cook Wild Herbs from the Cretan Countryside",
-    heroImage: "/images/1736598868245.jpg",
+    heroImage: asset("/images/1736598868245.jpg"),
     gallery: [
       {
-        src: "/images/1736598868245.jpg",
+        src: asset("/images/1736598868245.jpg"),
         alt: "Wild greens and herbs from Crete",
       },
       {
-        src: "/images/IMG_7610-769x1024.jpg",
+        src: asset("/images/IMG_7610-769x1024.jpg"),
         alt: "Foraging wild greens workshop",
       },
       {
-        src: "/images/IMG_20220410_152740-2048x1961-1.jpg",
+        src: asset("/images/IMG_20220410_152740-2048x1961-1.jpg"),
         alt: "Edible wild greens from the Cretan countryside",
       },
     ],
@@ -386,14 +388,14 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   wheat: {
     subtitle: "From Field to Traditional Cretan Bread",
-    heroImage: "/images/the-wheat-cycled-4-scaled-1.jpg",
+    heroImage: asset("/images/the-wheat-cycled-4-scaled-1.jpg"),
     gallery: [
       {
-        src: "/images/the-wheat-cycled-4-scaled-1.jpg",
+        src: asset("/images/the-wheat-cycled-4-scaled-1.jpg"),
         alt: "The wheat cycle workshop at Cretan Gea",
       },
       {
-        src: "/images/the-wheat-cycled-5-scaled-1.jpg",
+        src: asset("/images/the-wheat-cycled-5-scaled-1.jpg"),
         alt: "Traditional wheat threshing and bread-making",
       },
     ],

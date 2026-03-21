@@ -1,3 +1,4 @@
+import { asset } from "@/utils/assetUrl";
 import { useState, useCallback, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
@@ -5,31 +6,31 @@ import { ScrollReveal } from "./ScrollReveal";
 import type { Dictionary } from "@/lib/i18n/en";
 
 const GALLERY_IMAGES = [
-  "/images/cooking-1-1.webp",
-  "/images/2L1A6120.webp",
-  "/images/2L1A5970-1.webp",
-  "/images/7H8A5212.webp",
-  "/images/2L1A6177.webp",
-  "/images/102.webp",
-  "/images/2L1A6257-Edit.webp",
-  "/images/7H8A4896.webp",
-  "/images/2L1A6260-Edit-Edit.webp",
-  "/images/095.webp",
-  "/images/2L1A6318-Edit.webp",
-  "/images/2L1A6354-Edit.webp",
-  "/images/0018.webp",
-  "/images/2L1A6367-Edit.jpg",
-  "/images/2L1A6394-HDR.webp",
-  "/images/7H8A5046-scaled.webp",
-  "/images/2L1A6435.webp",
-  "/images/2L1A6454-Edit.webp",
-  "/images/2L1A6489.webp",
-  "/images/2L1A6500.webp",
-  "/images/2L1A6754.webp",
-  "/images/2L1A6795.jpg",
-  "/images/2L1A6803.webp",
-  "/images/2L1A7165.webp",
-  "/images/2L1A6052-1.webp",
+  asset("/images/cooking-1-1.webp"),
+  asset("/images/2L1A6120.webp"),
+  asset("/images/2L1A5970-1.webp"),
+  asset("/images/7H8A5212.webp"),
+  asset("/images/2L1A6177.webp"),
+  asset("/images/102.webp"),
+  asset("/images/2L1A6257-Edit.webp"),
+  asset("/images/7H8A4896.webp"),
+  asset("/images/2L1A6260-Edit-Edit.webp"),
+  asset("/images/095.webp"),
+  asset("/images/2L1A6318-Edit.webp"),
+  asset("/images/2L1A6354-Edit.webp"),
+  asset("/images/0018.webp"),
+  asset("/images/2L1A6367-Edit.jpg"),
+  asset("/images/2L1A6394-HDR.webp"),
+  asset("/images/7H8A5046-scaled.webp"),
+  asset("/images/2L1A6435.webp"),
+  asset("/images/2L1A6454-Edit.webp"),
+  asset("/images/2L1A6489.webp"),
+  asset("/images/2L1A6500.webp"),
+  asset("/images/2L1A6754.webp"),
+  asset("/images/2L1A6795.jpg"),
+  asset("/images/2L1A6803.webp"),
+  asset("/images/2L1A7165.webp"),
+  asset("/images/2L1A6052-1.webp"),
 ];
 
 interface GalleryProps {

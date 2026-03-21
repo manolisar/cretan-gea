@@ -1,3 +1,5 @@
+import { asset } from "@/utils/assetUrl";
+
 export const SITE = {
   name: "Cretan Gea",
   tagline: "Authentic Cooking Classes & Workshops in Chania, Crete",
@@ -26,28 +28,28 @@ export const SOCIAL = {
 };
 
 export const IMAGES = {
-  logo: "/images/logo-light.svg",
-  hero: "/images/Homepage-Hero.webp",
-  ctaBanner: "/images/2L1A7095-scaled-1.png",
+  logo: asset("/images/logo-light.svg"),
+  hero: asset("/images/Homepage-Hero.webp"),
+  ctaBanner: asset("/images/2L1A7095-scaled-1.png"),
   photoStrip: [
-    "/images/Rectangle-53.png",
-    "/images/Rectangle-55.png",
-    "/images/Rectangle-56.png",
-    "/images/Rectangle-57.png",
-    "/images/Rectangle-58.png",
+    asset("/images/Rectangle-53.png"),
+    asset("/images/Rectangle-55.png"),
+    asset("/images/Rectangle-56.png"),
+    asset("/images/Rectangle-57.png"),
+    asset("/images/Rectangle-58.png"),
   ],
-  cooking: "/images/Cooking-21.png",
-  ceramics: "/images/Ceramics-2.webp",
+  cooking: asset("/images/Cooking-21.png"),
+  ceramics: asset("/images/Ceramics-2.webp"),
   workshops: {
-    olive: "/images/1736598868263-1.png",
-    vineyard: "/images/grapes.jpg",
-    cheese: "/images/Turi-copy-scaled.webp",
-    honey: "/images/1736599008832.jpg",
-    soap: "/images/SAPOYNI-2-769x1024-1.jpeg",
-    sweets: "/images/spoon-sweets-2-768x1024-1.jpg",
-    sfakianPie: "/images/sfakiani-pita-8-768x1024-1.jpg",
-    greens: "/images/1736598868245.jpg",
-    wheat: "/images/the-wheat-cycled-4-scaled-1.jpg",
+    olive: asset("/images/1736598868263-1.png"),
+    vineyard: asset("/images/grapes.jpg"),
+    cheese: asset("/images/Turi-copy-scaled.webp"),
+    honey: asset("/images/1736599008832.jpg"),
+    soap: asset("/images/SAPOYNI-2-769x1024-1.jpeg"),
+    sweets: asset("/images/spoon-sweets-2-768x1024-1.jpg"),
+    sfakianPie: asset("/images/sfakiani-pita-8-768x1024-1.jpg"),
+    greens: asset("/images/1736598868245.jpg"),
+    wheat: asset("/images/the-wheat-cycled-4-scaled-1.jpg"),
   },
 };
 
