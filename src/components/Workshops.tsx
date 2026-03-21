@@ -105,7 +105,7 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
                       letterSpacing: "0.03em",
                     }}
                   >
-                    €{workshop.price}
+                    €{workshop.price} / {d.perPerson}
                   </div>
                 </div>
 
@@ -126,6 +126,12 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
                     }}
                   >
                     {workshop.description}
+                  </p>
+                  <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontStyle: "italic", marginBottom: 2 }}>
+                    ★ {d.kidsDiscount}
+                  </p>
+                  <p style={{ fontSize: "0.72rem", color: "#C9A84C", fontStyle: "italic", marginBottom: 10 }}>
+                    ★ {d.toddlersFree}
                   </p>
                   <span
                     className="uppercase font-[family-name:var(--font-nav)]"

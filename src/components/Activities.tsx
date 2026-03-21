@@ -153,10 +153,18 @@ export function Activities({ dict, locale }: ActivitiesProps) {
                     </span>
                   </div>
 
-                  {/* Price — burgundy accent */}
-                  <p className="text-[#6B1D2A] text-[0.88rem] font-semibold tracking-[0.02em] mb-6">
-                    {d.from} &euro;{activity.price}
-                  </p>
+                  {/* Price — burgundy accent + kids discount */}
+                  <div className="mb-6">
+                    <p className="text-[#6B1D2A] text-[0.88rem] font-semibold tracking-[0.02em]">
+                      {d.from} &euro;{activity.price} <span className="text-[#8A8075] font-normal text-[0.8rem]">/ {d.perPerson}</span>
+                    </p>
+                    <p className="text-[#C9A84C] text-[0.75rem] mt-1 italic">
+                      ★ {d.kidsDiscount}
+                    </p>
+                    <p className="text-[#C9A84C] text-[0.75rem] mt-0.5 italic">
+                      ★ {d.toddlersFree}
+                    </p>
+                  </div>
 
                   {/* Discover link */}
                   <span

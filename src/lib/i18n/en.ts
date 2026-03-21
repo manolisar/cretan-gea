@@ -29,6 +29,9 @@ const en = {
     upTo: "Up to",
     guests: "guests",
     from: "from",
+    perPerson: "per person",
+    kidsDiscount: "Children under 12: 50% off",
+    toddlersFree: "Under 6 years old: Free",
   },
   workshops: {
     tag: "Workshops",
@@ -36,6 +39,9 @@ const en = {
     subtitle:
       "Deep-dive sessions into the products and techniques that define Cretan life.",
     explore: "Explore",
+    perPerson: "per person",
+    kidsDiscount: "Children under 12: 50% off",
+    toddlersFree: "Under 6 years old: Free",
   },
   calendar: {
     tag: "Availability",

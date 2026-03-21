@@ -31,6 +31,9 @@ const gr: Dictionary = {
     upTo: "Έως",
     guests: "άτομα",
     from: "από",
+    perPerson: "ανά άτομο",
+    kidsDiscount: "Παιδιά κάτω των 12: 50% έκπτωση",
+    toddlersFree: "Κάτω των 6 ετών: Δωρεάν",
   },
   workshops: {
     tag: "Εργαστήρια",
@@ -38,6 +41,9 @@ const gr: Dictionary = {
     subtitle:
       "Εμβαθύνετε στα προϊόντα και τις τεχνικές που ορίζουν τον κρητικό τρόπο ζωής.",
     explore: "Εξερεύνηση",
+    perPerson: "ανά άτομο",
+    kidsDiscount: "Παιδιά κάτω των 12: 50% έκπτωση",
+    toddlersFree: "Κάτω των 6 ετών: Δωρεάν",
   },
   calendar: {
     tag: "Διαθεσιμότητα",
