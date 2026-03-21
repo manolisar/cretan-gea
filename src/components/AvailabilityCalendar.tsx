@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { hasBackend } from "@/utils/api";
+import { STATIC_ACTIVITIES } from "@/lib/static-data";
 import {
   format,
   startOfMonth,
@@ -50,7 +51,19 @@ export function AvailabilityCalendar({ dict }: { dict: Dictionary }) {
   const d = dict.calendar;
 
   useEffect(() => {
-    if (!hasBackend()) return;
+    if (!hasBackend()) {
+      // Static fallback: show activities without live availability
+      const staticActs = STATIC_ACTIVITIES.map((a) => ({
+        id: a.id,
+        name: a.name,
+        type: a.type,
+        price: a.price,
+        capacity: a.capacity,
+      }));
+      setActivities(staticActs);
+      if (staticActs.length > 0) setSelectedActivity(staticActs[0].id);
+      return;
+    }
     fetch("/api/availability")
       .then((r) => r.json())
       .then((data: { availability: AvailabilityMap; activities: Activity[] }) => {
