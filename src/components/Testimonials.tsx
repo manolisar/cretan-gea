@@ -118,7 +118,7 @@ export function Testimonials({ dict, testimonials }: TestimonialsProps) {
         {/* IGCAT Award Banner */}
         <ScrollReveal>
           <a
-            href="https://www.topfoodiewebsites.org/"
+            href="https://www.topfoodiewebsites.org/2026-edition/"
             target="_blank"
             rel="noopener noreferrer"
             className="block max-w-[680px] mx-auto mt-12 mb-4 group"
