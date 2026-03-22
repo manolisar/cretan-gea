@@ -25,6 +25,8 @@ export const SOCIAL = {
   tiktok: "https://www.tiktok.com/@cretangea_",
   tripadvisor:
     "https://www.tripadvisor.com/Attraction_Review-g189415-d27344283-Reviews-Cretan_Gea-Chania_Town_Chania_Prefecture_Crete.html",
+  google:
+    "https://www.google.com/maps/place//data=!4m2!3m1!1s0x149b7f9b926583f1:0xbd48e5813114c9b8",
 };
 
 export const IMAGES = {
@@ -93,6 +95,7 @@ export const TESTIMONIALS = [
     author: "Sabine",
     origin: "Germany",
     rating: 5,
+    source: "google" as const,
   },
   {
     quote:
@@ -100,6 +103,7 @@ export const TESTIMONIALS = [
     author: "Peter",
     origin: "South Africa",
     rating: 5,
+    source: "google" as const,
   },
   {
     quote:
@@ -107,6 +111,7 @@ export const TESTIMONIALS = [
     author: "Helen",
     origin: "Greece",
     rating: 5,
+    source: "google" as const,
   },
 ];
 

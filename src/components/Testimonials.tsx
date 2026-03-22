@@ -1,10 +1,11 @@
 import { SectionHeader } from "./SectionHeader";
 import { ScrollReveal } from "./ScrollReveal";
+import { SOCIAL } from "@/lib/constants";
 import type { Dictionary } from "@/lib/i18n/en";
 
 interface TestimonialsProps {
   dict: Dictionary;
-  testimonials: { quote: string; author: string; origin: string; rating: number }[];
+  testimonials: { quote: string; author: string; origin: string; rating: number; source?: string }[];
 }
 
 export function Testimonials({ dict, testimonials }: TestimonialsProps) {
@@ -35,6 +36,36 @@ export function Testimonials({ dict, testimonials }: TestimonialsProps) {
           />
         </ScrollReveal>
 
+        {/* Google rating badge */}
+        <ScrollReveal>
+          <div className="flex justify-center mb-10">
+            <a
+              href={SOCIAL.google}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-[rgba(201,168,76,0.2)] transition-all duration-300 hover:border-[rgba(201,168,76,0.5)] group"
+              style={{ background: "rgba(74,14,26,0.5)" }}
+            >
+              {/* Google "G" icon */}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+
+              {/* Stars */}
+              <div className="text-gold text-[0.95rem] tracking-[0.05em]">
+                &#9733;&#9733;&#9733;&#9733;&#9733;
+              </div>
+
+              <span className="text-[0.85rem] text-[#F5EDDA]/70 font-medium group-hover:text-[#F5EDDA] transition-colors duration-300">
+                5.0 {dict.testimonials.googleRating}
+              </span>
+            </a>
+          </div>
+        </ScrollReveal>
+
         {/* Mobile: horizontal scroll, Desktop: grid */}
         <div className="flex md:grid md:grid-cols-3 gap-6 max-w-[1100px] overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0">
           {testimonials.map((t, i) => (
@@ -61,18 +92,43 @@ export function Testimonials({ dict, testimonials }: TestimonialsProps) {
                 </blockquote>
 
                 {/* Author info */}
-                <div>
-                  <div className="text-[0.85rem] font-semibold tracking-[0.03em] text-gold">
-                    {t.author}
+                <div className="flex items-end justify-between">
+                  <div>
+                    <div className="text-[0.85rem] font-semibold tracking-[0.03em] text-gold">
+                      {t.author}
+                    </div>
+                    <div className="text-[0.75rem] italic text-[rgba(245,237,218,0.4)] mt-0.5">
+                      {t.origin}
+                    </div>
                   </div>
-                  <div className="text-[0.75rem] italic text-[rgba(245,237,218,0.4)] mt-0.5">
-                    {t.origin}
-                  </div>
+                  {t.source === "google" && (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="opacity-40">
+                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                  )}
                 </div>
               </div>
             </ScrollReveal>
           ))}
         </div>
+
+        {/* Google CTA link */}
+        <ScrollReveal>
+          <div className="flex justify-center mt-10">
+            <a
+              href={SOCIAL.google}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[0.85rem] text-gold/70 transition-colors duration-300 hover:text-gold font-medium"
+            >
+              {dict.testimonials.googleCta}
+              <span className="text-[0.75rem]">&rarr;</span>
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

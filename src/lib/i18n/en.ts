@@ -76,6 +76,8 @@ const en = {
     tag: "Guest Reviews",
     title: "What Our Guests Say",
     subtitle: "Moments that stay with you long after you leave Crete.",
+    googleCta: "Read more reviews on Google",
+    googleRating: "on Google",
   },
   elfsight: {
     tag: "Social Proof",
@@ -313,6 +315,8 @@ export type Dictionary = {
     tag: string;
     title: string;
     subtitle: string;
+    googleCta: string;
+    googleRating: string;
   };
   elfsight: {
     tag: string;

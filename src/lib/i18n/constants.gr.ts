@@ -33,6 +33,7 @@ export const TESTIMONIALS_GR = [
     author: "Sabine",
     origin: "Γερμανία",
     rating: 5,
+    source: "google" as const,
   },
   {
     quote:
@@ -40,6 +41,7 @@ export const TESTIMONIALS_GR = [
     author: "Peter",
     origin: "Νότια Αφρική",
     rating: 5,
+    source: "google" as const,
   },
   {
     quote:
@@ -47,6 +49,7 @@ export const TESTIMONIALS_GR = [
     author: "Helen",
     origin: "Ελλάδα",
     rating: 5,
+    source: "google" as const,
   },
 ];
 
