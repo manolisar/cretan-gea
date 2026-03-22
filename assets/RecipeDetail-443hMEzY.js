@@ -1,4 +1,4 @@
-import{u as v,r as k,j as e,N as c}from"./index-UkaoPGUD.js";import{a as m,i as w,L as j,N as C,r as u,c as z,W as S,g as T,e as A}from"./WhatsAppFloat-BSy3xlr6.js";import{S as D,l as N}from"./localizeRecipe--Apa-OIf.js";import{A as I,C as E}from"./chef-hat-R28ZCVKl.js";import{c as B}from"./createLucideIcon-kCWkZTBs.js";import{A as F}from"./arrow-right-tTxw7hmo.js";/**
+import{u as v,r as k,j as e,N as c}from"./index-9tYSARQt.js";import{a as m,i as w,L as j,N as C,r as u,c as z,W as S,g as T,e as A}from"./WhatsAppFloat-KHFzpDWb.js";import{S as D,l as N}from"./localizeRecipe-ELf79xnU.js";import{A as I,C as E}from"./chef-hat-wFIkF0Bb.js";import{c as B}from"./createLucideIcon-DdWuDtvr.js";import{A as F}from"./arrow-right-CTq9JkCc.js";/**
  * @license lucide-react v0.577.0 - ISC
  *
  * This source code is licensed under the ISC license.

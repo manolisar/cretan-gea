@@ -1,4 +1,4 @@
-import{c as r}from"./createLucideIcon-kCWkZTBs.js";import{a as e}from"./WhatsAppFloat-BSy3xlr6.js";/**
+import{c as r}from"./createLucideIcon-DdWuDtvr.js";import{a as e}from"./WhatsAppFloat-KHFzpDWb.js";/**
  * @license lucide-react v0.577.0 - ISC
  *
  * This source code is licensed under the ISC license.
