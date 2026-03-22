@@ -124,7 +124,7 @@ export function AvailabilityCalendar({ dict, locale = "en" }: { dict: Dictionary
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block text-[0.68rem] tracking-[0.3em] uppercase text-earth mb-4">
+          <span className="inline-block text-[0.68rem] tracking-[0.3em] uppercase text-burgundy mb-4">
             {uc(d.tag)}
           </span>
           <h2 className="font-[family-name:var(--font-display)] text-[clamp(2rem,3.5vw,3rem)] font-normal leading-[1.2] mb-4">

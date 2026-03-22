@@ -83,7 +83,8 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
                         <img
                           src={data.photo}
                           alt={member.name}
-                          className="w-full h-full object-cover object-top"
+                          className="w-full h-full object-cover object-top transition-[filter] duration-500 group-hover:![filter:sepia(0)_saturate(1)]"
+                          style={{ filter: "sepia(0.15) saturate(0.9)" }}
                         />
                       </div>
                       <h3 className="font-[family-name:var(--font-display)] text-[1.3rem] font-semibold text-[#1A1A1A] mb-1">

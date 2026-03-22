@@ -7,6 +7,7 @@ interface SectionHeaderProps {
   className?: string;
   tagClassName?: string;
   titleClassName?: string;
+  subtitleClassName?: string;
 }
 
 export function SectionHeader({
@@ -14,8 +15,9 @@ export function SectionHeader({
   title,
   subtitle,
   className = "",
-  tagClassName = "text-[#C9A84C]",
+  tagClassName = "text-burgundy",
   titleClassName = "",
+  subtitleClassName = "text-[#8A8075]",
 }: SectionHeaderProps) {
   const uc = useUC();
   return (
@@ -31,7 +33,7 @@ export function SectionHeader({
         {title}
       </h2>
       {subtitle && (
-        <p className="font-[family-name:var(--font-sans)] text-[0.95rem] text-[#8A8075] leading-[1.7]">{subtitle}</p>
+        <p className={`font-[family-name:var(--font-sans)] text-[0.95rem] ${subtitleClassName} leading-[1.7]`}>{subtitle}</p>
       )}
     </div>
   );

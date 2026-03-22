@@ -40,7 +40,7 @@ export function OurStory({ dict }: OurStoryProps) {
         <ScrollReveal delay={0.2}>
           <div>
             {/* Tag */}
-            <span className="font-[family-name:var(--font-nav)] text-[0.65rem] tracking-[0.3em] uppercase text-[#C9A84C] font-medium mb-4 block">
+            <span className="font-[family-name:var(--font-nav)] text-[0.65rem] tracking-[0.3em] uppercase text-burgundy font-medium mb-4 block">
               {uc(s.tag)}
             </span>
 

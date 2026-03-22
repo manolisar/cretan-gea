@@ -107,9 +107,10 @@ export function Gallery({ dict }: GalleryProps) {
                   position: "absolute",
                   inset: 0,
                   background: "rgba(44,36,22,0)",
-                  transition: "background 0.3s",
+                  transition: "background 0.3s, box-shadow 0.4s",
+                  boxShadow: "inset 0 0 0 0px rgba(201,168,76,0)",
                 }}
-                className="group-hover:!bg-[rgba(44,36,22,0.18)]"
+                className="group-hover:!bg-[rgba(44,36,22,0.18)] group-hover:![box-shadow:inset_0_0_0_2px_rgba(201,168,76,0.5)]"
               />
             </div>
           </ScrollReveal>
