@@ -80,6 +80,9 @@ const gr: Dictionary = {
     subtitle: "Στιγμές που μένουν μαζί σας πολύ μετά την αναχώρηση από την Κρήτη.",
     googleCta: "Διαβάστε περισσότερες κριτικές στο Google",
     googleRating: "στο Google",
+    igcatYear: "Top 10 Foodie Websites 2026",
+    igcatTitle: "Στα 10 κορυφαία Foodie Websites του κόσμου",
+    igcatDescription: "Το Cretan Gea επιλέχθηκε από τη διεθνή κριτική επιτροπή του IGCAT για την ανάδειξη της κρητικής γαστρονομίας, των τοπικών προϊόντων και της παραδοσιακής διατροφικής κουλτούρας.",
   },
   elfsight: {
     tag: "Κοινωνική Απόδειξη",

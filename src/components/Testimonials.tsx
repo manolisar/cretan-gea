@@ -115,9 +115,50 @@ export function Testimonials({ dict, testimonials }: TestimonialsProps) {
           ))}
         </div>
 
+        {/* IGCAT Award Banner */}
+        <ScrollReveal>
+          <a
+            href="https://www.topfoodiewebsites.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block max-w-[680px] mx-auto mt-12 mb-4 group"
+          >
+            <div
+              className="relative rounded-[4px] border border-gold/25 px-8 py-7 flex items-center gap-6 transition-all duration-300 hover:border-gold/50 overflow-hidden"
+              style={{ background: "rgba(201,168,76,0.06)" }}
+            >
+              {/* Decorative laurel / award icon */}
+              <div className="shrink-0 w-14 h-14 rounded-full border-2 border-gold/40 flex items-center justify-center group-hover:border-gold/70 transition-colors duration-300">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 15l-3 6h6l-3-6z"/>
+                  <path d="M8 12a4 4 0 0 1 0-8c1.5 0 2.5.5 4 2 1.5-1.5 2.5-2 4-2a4 4 0 0 1 0 8"/>
+                  <path d="M12 12c-1 0-4-1-4-4"/>
+                  <path d="M12 12c1 0 4-1 4-4"/>
+                </svg>
+              </div>
+
+              <div className="flex-1 min-w-0">
+                <div className="font-[family-name:var(--font-nav)] text-[0.65rem] tracking-[0.2em] uppercase text-gold/70 mb-1">
+                  IGCAT — {dict.testimonials.igcatYear}
+                </div>
+                <div className="font-[family-name:var(--font-display)] text-[1.05rem] md:text-[1.15rem] text-[#F5EDDA] leading-snug">
+                  {dict.testimonials.igcatTitle}
+                </div>
+                <div className="text-[0.8rem] text-[#F5EDDA]/50 mt-1.5 leading-relaxed">
+                  {dict.testimonials.igcatDescription}
+                </div>
+              </div>
+
+              <span className="shrink-0 text-gold/50 group-hover:text-gold group-hover:translate-x-0.5 transition-all duration-300 text-sm">
+                &rarr;
+              </span>
+            </div>
+          </a>
+        </ScrollReveal>
+
         {/* Google CTA link */}
         <ScrollReveal>
-          <div className="flex justify-center mt-10">
+          <div className="flex justify-center mt-6">
             <a
               href={SOCIAL.google}
               target="_blank"

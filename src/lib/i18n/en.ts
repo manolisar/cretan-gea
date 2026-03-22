@@ -78,6 +78,9 @@ const en = {
     subtitle: "Moments that stay with you long after you leave Crete.",
     googleCta: "Read more reviews on Google",
     googleRating: "on Google",
+    igcatYear: "Top 10 Foodie Websites 2026",
+    igcatTitle: "Listed among the World's Top 10 Foodie Websites",
+    igcatDescription: "Cretan Gea was selected by IGCAT's international jury for celebrating Cretan gastronomy, local products, and traditional food culture.",
   },
   elfsight: {
     tag: "Social Proof",
@@ -317,6 +320,9 @@ export type Dictionary = {
     subtitle: string;
     googleCta: string;
     googleRating: string;
+    igcatYear: string;
+    igcatTitle: string;
+    igcatDescription: string;
   };
   elfsight: {
     tag: string;
