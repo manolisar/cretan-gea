@@ -8,11 +8,10 @@ export function Hero({ dict }: { dict: Dictionary }) {
   const uc = useUC();
   return (
     <section
-      className="min-h-screen flex items-center relative overflow-hidden parallax-bg"
+      className="min-h-screen flex items-center relative overflow-hidden parallax-bg bg-[position:65%_30%] sm:bg-[position:60%_40%] md:bg-center"
       style={{
         backgroundImage: `url('${IMAGES.hero}')`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
       }}
     >
       {/* Cinematic gradient — Golden Heritage: deep, rich overlay */}
