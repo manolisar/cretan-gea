@@ -28,7 +28,7 @@ export function Footer({ dict, locale }: FooterProps) {
             src={IMAGES.logo}
             alt="Cretan Gea"
             className="h-11 mb-4"
-            style={{ filter: "drop-shadow(0 0 1px rgba(255,255,255,0.6))" }}
+            style={{ filter: "drop-shadow(0 0 4px rgba(239,175,53,0.4)) drop-shadow(0 0 8px rgba(201,168,76,0.2))" }}
           />
           <p className="text-[0.88rem] leading-[1.7] max-w-[280px]">
             {d.brandDescription}

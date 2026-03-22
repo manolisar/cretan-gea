@@ -52,8 +52,8 @@ export function Navbar({ dict, locale }: NavbarProps) {
             height: scrolled ? 48 : 64,
             width: "auto",
             filter: scrolled
-              ? "drop-shadow(0 0 1px rgba(255,255,255,0.6))"
-              : "drop-shadow(0 0 2px rgba(255,255,255,0.5)) drop-shadow(0 1px 4px rgba(0,0,0,0.3))",
+              ? "drop-shadow(0 0 4px rgba(239,175,53,0.4)) drop-shadow(0 0 8px rgba(201,168,76,0.2))"
+              : "drop-shadow(0 0 6px rgba(239,175,53,0.5)) drop-shadow(0 0 12px rgba(201,168,76,0.25)) drop-shadow(0 1px 4px rgba(0,0,0,0.3))",
           }}
         />
       </a>
