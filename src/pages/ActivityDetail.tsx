@@ -17,6 +17,7 @@ import { greekUpperCase } from "@/utils/greekUpperCase";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { localizeActivity } from "@/utils/localizeActivity";
 
 interface Activity {
   id: string;
@@ -72,8 +73,9 @@ export default function ActivityDetail() {
   const dict = getDictionary(locale as Locale);
   const d = dict.activityDetail;
   const contentMap = locale === "gr" ? ACTIVITY_CONTENT_GR : ACTIVITY_CONTENT;
-  const content = contentMap[activity.id];
-  const bookingMessage = `${d.bookingPrefix} ${activity.name} ${d.bookingSuffix}`;
+  const localizedActivity = localizeActivity(activity, locale);
+  const content = contentMap[localizedActivity.id];
+  const bookingMessage = `${d.bookingPrefix} ${localizedActivity.name} ${d.bookingSuffix}`;
   const uc = (text: string) => locale === "gr" ? greekUpperCase(text) : text;
 
   return (
@@ -102,13 +104,13 @@ export default function ActivityDetail() {
 
         <div style={{ position: "relative", zIndex: 10, padding: "0 24px 48px", maxWidth: 900 }}>
           <span className="uppercase" style={{ display: "inline-block", fontSize: "0.68rem", letterSpacing: "0.3em", color: "#C5A55A", marginBottom: 12 }}>
-            . {uc(activity.type)} .
+            . {uc(localizedActivity.type)} .
           </span>
           <h1
             className="font-[family-name:var(--font-display)]"
             style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 400, color: "white", lineHeight: 1.1, marginBottom: 12 }}
           >
-            {activity.name}
+            {localizedActivity.name}
           </h1>
           {content?.subtitle && (
             <p style={{ fontSize: "1.05rem", color: "rgba(255,255,255,0.8)", maxWidth: 560 }}>
@@ -123,7 +125,7 @@ export default function ActivityDetail() {
         <div style={{ maxWidth: 960, margin: "0 auto", padding: "24px 24px" }}>
           <div className="details-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
             <DetailItem icon={<MapPin size={18} />} label={d.location} value={d.locationArea} />
-            <DetailItem icon={<Clock size={18} />} label={d.duration} value={activity.duration} />
+            <DetailItem icon={<Clock size={18} />} label={d.duration} value={localizedActivity.duration} />
             <DetailItem icon={<Users size={18} />} label={d.groupSize} value={`${d.guestsPrefix}${activity.capacity}${d.guestsSuffix}`} />
             <DetailItem
               icon={<Euro size={18} />}
@@ -162,7 +164,7 @@ export default function ActivityDetail() {
 
         {/* Description */}
         <section style={{ padding: "40px 0", borderBottom: "1px solid #E8DFD0" }}>
-          {(content?.description || [activity.description]).map((p, i) => (
+          {(content?.description || [localizedActivity.description]).map((p, i) => (
             <p key={i} style={{ fontSize: "0.95rem", color: "rgba(44,36,22,0.8)", lineHeight: 1.85, marginBottom: 16, maxWidth: 720 }}>
               {p}
             </p>
@@ -313,7 +315,7 @@ export default function ActivityDetail() {
               {d.bookExperience}
             </h2>
             <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.6)", marginBottom: 4 }}>
-              {activity.name} · {d.fromPrice}{activity.price} {d.perPerson}
+              {localizedActivity.name} · {d.fromPrice}{activity.price} {d.perPerson}
               {content?.childPrice && ` · ${d.childrenPrefix}${content.childPrice}`}
             </p>
             <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.45)", marginBottom: 32 }}>{d.bookDescription}</p>
@@ -324,7 +326,7 @@ export default function ActivityDetail() {
               <a href={`tel:${CONTACT.phone}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, padding: "14px 28px", background: "#8B6F47", color: "#FAF8F4", borderRadius: 10, fontSize: "0.875rem", fontWeight: 500, textDecoration: "none" }}>
                 <Phone size={18} />{d.callUs}
               </a>
-              <a href={`mailto:${CONTACT.email}?subject=Booking: ${activity.name}&body=${encodeURIComponent(bookingMessage)}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, padding: "14px 28px", background: "rgba(255,255,255,0.1)", color: "white", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 10, fontSize: "0.875rem", fontWeight: 500, textDecoration: "none" }}>
+              <a href={`mailto:${CONTACT.email}?subject=Booking: ${localizedActivity.name}&body=${encodeURIComponent(bookingMessage)}`} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, padding: "14px 28px", background: "rgba(255,255,255,0.1)", color: "white", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 10, fontSize: "0.875rem", fontWeight: 500, textDecoration: "none" }}>
                 <Mail size={18} />{d.email}
               </a>
             </div>

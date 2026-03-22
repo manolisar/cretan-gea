@@ -51,7 +51,7 @@ export default function Home() {
       <Workshops dict={dict} locale={locale} />
       <Gallery dict={dict} />
       <SectionDivider variant="dots" />
-      <AvailabilityCalendar dict={dict} />
+      <AvailabilityCalendar dict={dict} locale={locale} />
       <Testimonials dict={dict} testimonials={testimonials} />
       <SectionDivider variant="line" />
       <ElfsightWidget dict={dict} />

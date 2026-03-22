@@ -8,6 +8,7 @@ import { STATIC_ACTIVITIES } from "@/lib/static-data";
 import { routeHref } from "@/utils/assetUrl";
 import { hasBackend } from "@/utils/api";
 import { useUC } from "@/hooks/useGreekUpperCase";
+import { localizeActivity } from "@/utils/localizeActivity";
 import type { Dictionary } from "@/lib/i18n/en";
 
 interface Workshop {
@@ -62,7 +63,8 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
       </ScrollReveal>
 
       <div className="workshop-grid" style={{ display: "grid", gap: 20, maxWidth: 1100 }}>
-        {workshops.map((workshop, i) => {
+        {workshops.map((rawWorkshop, i) => {
+          const workshop = localizeActivity(rawWorkshop, locale);
           const content = contentMap[workshop.id];
 
           return (

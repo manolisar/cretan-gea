@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { hasBackend } from "@/utils/api";
 import { STATIC_ACTIVITIES } from "@/lib/static-data";
+import { localizeActivity } from "@/utils/localizeActivity";
 import {
   format,
   startOfMonth,
@@ -41,7 +42,7 @@ interface Activity {
 // { "2026-03-20": { "cooking": { booked: 8, capacity: 10 } } }
 type AvailabilityMap = Record<string, Record<string, { booked: number; capacity: number }>>;
 
-export function AvailabilityCalendar({ dict }: { dict: Dictionary }) {
+export function AvailabilityCalendar({ dict, locale = "en" }: { dict: Dictionary; locale?: string }) {
   const uc = useUC();
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
@@ -111,7 +112,8 @@ export function AvailabilityCalendar({ dict }: { dict: Dictionary }) {
     return Math.max(0, dayData.capacity - dayData.booked);
   }
 
-  const activityName = selectedActivityObj?.name || "";
+  const localizedActivityObj = selectedActivityObj ? localizeActivity({ ...selectedActivityObj, description: "", duration: "" }, locale) : null;
+  const activityName = localizedActivityObj?.name || "";
   const dateStr = selectedDate
     ? format(selectedDate, "EEEE, MMMM d, yyyy")
     : "";
@@ -162,7 +164,7 @@ export function AvailabilityCalendar({ dict }: { dict: Dictionary }) {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    {a.name}
+                    {localizeActivity({ ...a, description: "", duration: "" }, locale).name}
                     <span style={{ marginLeft: 6, fontSize: "0.75rem", opacity: 0.6 }}>
                       €{a.price}
                     </span>

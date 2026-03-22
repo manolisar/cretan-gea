@@ -8,6 +8,7 @@ import { STATIC_ACTIVITIES } from "@/lib/static-data";
 import { routeHref } from "@/utils/assetUrl";
 import { hasBackend } from "@/utils/api";
 import { useUC } from "@/hooks/useGreekUpperCase";
+import { localizeActivity } from "@/utils/localizeActivity";
 import type { Dictionary } from "@/lib/i18n/en";
 
 interface Activity {
@@ -52,7 +53,8 @@ export function Activities({ dict, locale }: ActivitiesProps) {
       </ScrollReveal>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 56, maxWidth: 1100 }}>
-        {activities.map((activity, i) => {
+        {activities.map((rawActivity, i) => {
+          const activity = localizeActivity(rawActivity, locale);
           const content = contentMap[activity.id];
           const isEven = i % 2 === 1;
 
