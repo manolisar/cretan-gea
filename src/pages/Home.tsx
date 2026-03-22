@@ -10,8 +10,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { OurStory } from "@/components/OurStory";
 import { SectionDivider } from "@/components/SectionDivider";
-import { Activities } from "@/components/Activities";
-import { Workshops } from "@/components/Workshops";
+import { Pillars } from "@/components/Pillars";
 import { Gallery } from "@/components/Gallery";
 import { AvailabilityCalendar } from "@/components/AvailabilityCalendar";
 import { Testimonials } from "@/components/Testimonials";
@@ -47,8 +46,7 @@ export default function Home() {
       <OurStory dict={dict} />
       <AboutTeam dict={dict} />
       <SectionDivider variant="leaf" />
-      <Activities dict={dict} locale={locale} />
-      <Workshops dict={dict} locale={locale} />
+      <Pillars dict={dict} locale={locale} />
       <Gallery dict={dict} />
       <SectionDivider variant="dots" />
       <AvailabilityCalendar dict={dict} locale={locale} />

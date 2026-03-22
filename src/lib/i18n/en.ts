@@ -1,7 +1,6 @@
 const en = {
   nav: {
-    activities: "Activities",
-    workshops: "Workshops",
+    experiences: "Experiences",
     gallery: "Gallery",
     reviews: "Reviews",
     faq: "FAQ",
@@ -20,26 +19,31 @@ const en = {
     cta: "Explore Experiences",
     scroll: "Scroll",
   },
-  activities: {
-    tag: "Activities",
-    title: "Taste, Create, Remember",
-    subtitle:
+  pillars: {
+    sectionTag: "Experiences",
+    sectionTitle: "Taste, Create, Explore",
+    sectionSubtitle:
       "Immerse yourself in the Cretan way of life through our signature hands-on experiences.",
-    activityLabel: "Activity",
+    gastronomy: {
+      tag: "The Cretan Table",
+      title: "From Garden to Plate",
+      subtitle: "Heritage cooking, wood-fires, and the celebrated Cretan diet.",
+    },
+    crafts: {
+      tag: "The Artisan's Workshop",
+      title: "Shape, Create, Take Home",
+      subtitle: "Tangible creations and ancient skills rooted in Cretan heritage.",
+    },
+    nature: {
+      tag: "Rooted in the Land",
+      title: "Walk, Harvest, Discover",
+      subtitle: "Connect with the ecosystem of Xirosterni and the Cretan landscape.",
+    },
     learnMore: "Learn more & book",
+    explore: "Explore",
     upTo: "Up to",
     guests: "guests",
     from: "from",
-    perPerson: "per person",
-    kidsDiscount: "Children under 12: 50% off",
-    toddlersFree: "Under 6 years old: Free",
-  },
-  workshops: {
-    tag: "Workshops",
-    title: "Discover Cretan Traditions",
-    subtitle:
-      "Deep-dive sessions into the products and techniques that define Cretan life.",
-    explore: "Explore",
     perPerson: "per person",
     kidsDiscount: "Children under 12: 50% off",
     toddlersFree: "Under 6 years old: Free",
@@ -108,9 +112,9 @@ const en = {
     brandDescription:
       "Authentic experiences from the Cretan land. Cooking, crafts, and traditions since the age of Minos.",
     explore: "Explore",
-    cooking: "Cooking",
-    ceramics: "Ceramics",
-    workshops: "Workshops",
+    gastronomy: "The Cretan Table",
+    crafts: "Artisan's Workshop",
+    nature: "Rooted in the Land",
     recipes: "Recipes",
     info: "Info",
     faq: "FAQ",
@@ -251,10 +255,15 @@ const en = {
   },
 };
 
+export type PillarStrings = {
+  tag: string;
+  title: string;
+  subtitle: string;
+};
+
 export type Dictionary = {
   nav: {
-    activities: string;
-    workshops: string;
+    experiences: string;
     gallery: string;
     reviews: string;
     faq: string;
@@ -272,21 +281,21 @@ export type Dictionary = {
     cta: string;
     scroll: string;
   };
-  activities: {
-    tag: string;
-    title: string;
-    subtitle: string;
-    activityLabel: string;
+  pillars: {
+    sectionTag: string;
+    sectionTitle: string;
+    sectionSubtitle: string;
+    gastronomy: PillarStrings;
+    crafts: PillarStrings;
+    nature: PillarStrings;
     learnMore: string;
+    explore: string;
     upTo: string;
     guests: string;
     from: string;
-  };
-  workshops: {
-    tag: string;
-    title: string;
-    subtitle: string;
-    explore: string;
+    perPerson: string;
+    kidsDiscount: string;
+    toddlersFree: string;
   };
   calendar: {
     tag: string;
@@ -347,9 +356,9 @@ export type Dictionary = {
   footer: {
     brandDescription: string;
     explore: string;
-    cooking: string;
-    ceramics: string;
-    workshops: string;
+    gastronomy: string;
+    crafts: string;
+    nature: string;
     recipes: string;
     info: string;
     faq: string;

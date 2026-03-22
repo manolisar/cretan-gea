@@ -42,18 +42,18 @@ export function Footer({ dict, locale }: FooterProps) {
           </h4>
           <ul className="space-y-2">
             <li>
-              <a href={routeHref(`/${locale}/#activities`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
-                {d.cooking}
+              <a href={routeHref(`/${locale}/#pillar-gastronomy`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
+                {d.gastronomy}
               </a>
             </li>
             <li>
-              <a href={routeHref(`/${locale}/#activities`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
-                {d.ceramics}
+              <a href={routeHref(`/${locale}/#pillar-crafts`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
+                {d.crafts}
               </a>
             </li>
             <li>
-              <a href={routeHref(`/${locale}/#workshops`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
-                {d.workshops}
+              <a href={routeHref(`/${locale}/#pillar-nature`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
+                {d.nature}
               </a>
             </li>
             <li>

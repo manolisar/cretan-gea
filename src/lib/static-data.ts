@@ -12,11 +12,41 @@ export interface Activity {
   imageUrl: string;
 }
 
+export type PillarId = "gastronomy" | "crafts" | "nature";
+
+export interface PillarConfig {
+  id: PillarId;
+  itemIds: string[];
+  accentColor: string;
+  layout: "large" | "grid";
+}
+
+export const PILLARS: PillarConfig[] = [
+  {
+    id: "gastronomy",
+    itemIds: ["cooking", "sfakian-pie", "wheat", "sweets", "cheese", "vineyard"],
+    accentColor: "#6B1D2A",
+    layout: "large",
+  },
+  {
+    id: "crafts",
+    itemIds: ["ceramics", "soap"],
+    accentColor: "#8B6F47",
+    layout: "grid",
+  },
+  {
+    id: "nature",
+    itemIds: ["greens", "olive-oil", "honey"],
+    accentColor: "#4A6741",
+    layout: "grid",
+  },
+];
+
 export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "cooking",
     name: "Cooking",
-    type: "activity",
+    type: "gastronomy",
     description:
       "Learn to prepare traditional Cretan dishes over wood fire — dolmades, stuffed vegetables, sfakian pie and more. Includes a full tasting meal with local wine and raki.",
     price: 120,
@@ -27,7 +57,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "ceramics",
     name: "Ceramics",
-    type: "activity",
+    type: "crafts",
     description:
       "Shape clay on the wheel and learn the techniques behind Minoan-inspired pottery. Take home your own handmade piece of Crete.",
     price: 90,
@@ -38,7 +68,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "olive-oil",
     name: "Olive Tree & Olive Oil",
-    type: "workshop",
+    type: "nature",
     description: "Discover the ancient tradition of olive cultivation and oil production in Crete.",
     price: 60,
     capacity: 10,
@@ -48,7 +78,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "vineyard",
     name: "Vineyard & Grapes",
-    type: "workshop",
+    type: "gastronomy",
     description: "Explore Cretan vineyards and learn about traditional winemaking techniques.",
     price: 60,
     capacity: 10,
@@ -58,7 +88,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "cheese",
     name: "Cretan Cheese",
-    type: "workshop",
+    type: "gastronomy",
     description: "Learn the art of making traditional Cretan cheeses from local milk.",
     price: 60,
     capacity: 10,
@@ -68,7 +98,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "honey",
     name: "Thyme Honey",
-    type: "workshop",
+    type: "nature",
     description: "Experience beekeeping and the production of Crete's famous thyme honey.",
     price: 55,
     capacity: 10,
@@ -78,7 +108,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "soap",
     name: "Handmade Soaps",
-    type: "workshop",
+    type: "crafts",
     description: "Create natural olive oil soaps using traditional Cretan methods.",
     price: 50,
     capacity: 10,
@@ -88,7 +118,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "sweets",
     name: "Sweet Preserves",
-    type: "workshop",
+    type: "gastronomy",
     description: "Make traditional Cretan fruit preserves and spoon sweets.",
     price: 55,
     capacity: 10,
@@ -98,7 +128,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "sfakian-pie",
     name: "Sfakian Pie",
-    type: "workshop",
+    type: "gastronomy",
     description: "Master the art of making the famous Sfakian cheese pie.",
     price: 55,
     capacity: 10,
@@ -108,7 +138,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "greens",
     name: "Wild Edible Greens",
-    type: "workshop",
+    type: "nature",
     description: "Forage and cook with wild herbs and greens from the Cretan countryside.",
     price: 55,
     capacity: 10,
@@ -118,7 +148,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
   {
     id: "wheat",
     name: "The Wheat Cycle",
-    type: "workshop",
+    type: "gastronomy",
     description: "Follow the journey of wheat from field to traditional Cretan bread.",
     price: 55,
     capacity: 10,
