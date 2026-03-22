@@ -4,6 +4,8 @@ import { Suspense, lazy } from "react";
 // Public pages
 const Home = lazy(() => import("./pages/Home"));
 const ActivityDetail = lazy(() => import("./pages/ActivityDetail"));
+const RecipeListing = lazy(() => import("./pages/RecipeListing"));
+const RecipeDetail = lazy(() => import("./pages/RecipeDetail"));
 
 // Admin pages
 const AdminLayout = lazy(() => import("./pages/admin/AdminLayout"));
@@ -28,6 +30,8 @@ export default function App() {
           {/* Public site */}
           <Route path="/:locale" element={<Home />} />
           <Route path="/:locale/activities/:id" element={<ActivityDetail />} />
+          <Route path="/:locale/recipes" element={<RecipeListing />} />
+          <Route path="/:locale/recipes/:slug" element={<RecipeDetail />} />
 
           {/* Admin */}
           <Route path="/admin/login" element={<Login />} />

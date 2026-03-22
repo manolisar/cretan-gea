@@ -21,6 +21,7 @@ export function Navbar({ dict, locale }: NavbarProps) {
   const navLinks = [
     { href: routeHref(`/${locale}/#activities`), label: dict.nav.activities },
     { href: routeHref(`/${locale}/#workshops`), label: dict.nav.workshops },
+    { href: routeHref(`/${locale}/recipes`), label: dict.nav.recipes },
     { href: routeHref(`/${locale}/#gallery`), label: dict.nav.gallery },
     { href: routeHref(`/${locale}/#testimonials`), label: dict.nav.reviews },
     { href: routeHref(`/${locale}/#faq`), label: dict.nav.faq },

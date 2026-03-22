@@ -56,6 +56,11 @@ export function Footer({ dict, locale }: FooterProps) {
                 {d.workshops}
               </a>
             </li>
+            <li>
+              <a href={routeHref(`/${locale}/recipes`)} className="text-[rgba(250,248,244,0.5)] no-underline text-[0.85rem] transition-colors duration-300 hover:text-gold">
+                {d.recipes}
+              </a>
+            </li>
           </ul>
         </div>
 

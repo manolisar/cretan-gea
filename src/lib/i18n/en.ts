@@ -7,6 +7,7 @@ const en = {
     faq: "FAQ",
     contact: "Contact",
     bookNow: "Book Now",
+    recipes: "Recipes",
   },
   hero: {
     location: "Xirosterni, Chania — Crete",
@@ -105,6 +106,7 @@ const en = {
     cooking: "Cooking",
     ceramics: "Ceramics",
     workshops: "Workshops",
+    recipes: "Recipes",
     info: "Info",
     faq: "FAQ",
     contact: "Contact",
@@ -198,6 +200,44 @@ const en = {
       },
     ],
   },
+  recipes: {
+    tag: "Traditional Recipes",
+    title: "Tastes of Crete",
+    subtitle:
+      "Authentic Cretan recipes from our kitchen — the same dishes you'll learn to prepare in our cooking experiences.",
+    readMore: "View Recipe",
+    prepTime: "Prep",
+    cookTime: "Cook",
+    servings: "Servings",
+    difficulty: "Difficulty",
+    categories: {
+      all: "All",
+      appetizer: "Appetizers",
+      main: "Main Courses",
+      pie: "Pies & Breads",
+    },
+    difficultyLabels: {
+      easy: "Easy",
+      medium: "Medium",
+      advanced: "Advanced",
+    },
+  },
+  recipeDetail: {
+    backToRecipes: "Back to Recipes",
+    ingredients: "Ingredients",
+    instructions: "Instructions",
+    chefNotes: "Traditional Notes",
+    step: "Step",
+    tip: "Tip",
+    prepTime: "Prep time",
+    cookTime: "Cook time",
+    servings: "Servings",
+    difficulty: "Difficulty",
+    tryItAt: "Learn to Make This at Cretan Gea",
+    tryItDescription:
+      "Join our hands-on cooking experience and learn to prepare this dish — and many more — with guidance from our team, using fresh ingredients from our garden.",
+    tryItButton: "Explore Cooking Experience",
+  },
   metadata: {
     homeTitle:
       "Cretan Gea | Authentic Cooking Classes & Workshops in Chania, Crete",
@@ -215,6 +255,7 @@ export type Dictionary = {
     faq: string;
     contact: string;
     bookNow: string;
+    recipes: string;
   };
   hero: {
     location: string;
@@ -299,6 +340,7 @@ export type Dictionary = {
     cooking: string;
     ceramics: string;
     workshops: string;
+    recipes: string;
     info: string;
     faq: string;
     contact: string;
@@ -361,6 +403,42 @@ export type Dictionary = {
       role: string;
       bio: string;
     }[];
+  };
+  recipes: {
+    tag: string;
+    title: string;
+    subtitle: string;
+    readMore: string;
+    prepTime: string;
+    cookTime: string;
+    servings: string;
+    difficulty: string;
+    categories: {
+      all: string;
+      appetizer: string;
+      main: string;
+      pie: string;
+    };
+    difficultyLabels: {
+      easy: string;
+      medium: string;
+      advanced: string;
+    };
+  };
+  recipeDetail: {
+    backToRecipes: string;
+    ingredients: string;
+    instructions: string;
+    chefNotes: string;
+    step: string;
+    tip: string;
+    prepTime: string;
+    cookTime: string;
+    servings: string;
+    difficulty: string;
+    tryItAt: string;
+    tryItDescription: string;
+    tryItButton: string;
   };
   metadata: {
     homeTitle: string;
