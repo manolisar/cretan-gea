@@ -75,8 +75,8 @@ export function Gallery({ dict }: GalleryProps) {
 
       {/* Masonry grid */}
       <div
+        className="mx-auto [columns:2_180px] sm:[columns:3_200px] lg:[columns:4_220px]"
         style={{
-          columns: "4 220px",
           columnGap: 10,
           maxWidth: 1200,
         }}

@@ -28,7 +28,7 @@ export function OurStory({ dict }: OurStoryProps) {
                 src={asset("/images/cooking-1-1.webp")}
                 alt="Cretan Gea — Cooking experience with guests"
                 className="w-full h-auto object-cover"
-                style={{ minHeight: 400, maxHeight: 560 }}
+                style={{ minHeight: "clamp(250px, 40vw, 400px)", maxHeight: 560 }}
               />
               {/* Warm overlay */}
               <div className="absolute inset-0 bg-[rgba(139,111,71,0.08)] pointer-events-none" />

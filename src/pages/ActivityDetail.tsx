@@ -87,7 +87,7 @@ export default function ActivityDetail() {
       <section
         style={{
           height: "60vh",
-          minHeight: 400,
+          minHeight: 340,
           display: "flex",
           alignItems: "flex-end",
           position: "relative",
@@ -96,13 +96,13 @@ export default function ActivityDetail() {
       >
         <a
           href={routeHref(`/${locale}`)}
-          style={{ position: "absolute", top: 96, left: 24, zIndex: 10, display: "inline-flex", alignItems: "center", gap: 8, color: "rgba(255,255,255,0.7)", fontSize: "0.875rem", textDecoration: "none" }}
+          className="absolute top-24 left-4 sm:left-6 z-10 inline-flex items-center gap-2 text-[rgba(255,255,255,0.7)] text-[0.875rem] no-underline"
         >
           <ArrowLeft size={16} />
           {d.backToHome}
         </a>
 
-        <div style={{ position: "relative", zIndex: 10, padding: "0 24px 48px", maxWidth: 900 }}>
+        <div className="px-4 pb-8 sm:px-6 sm:pb-12" style={{ position: "relative", zIndex: 10, maxWidth: 900 }}>
           <span className="uppercase" style={{ display: "inline-block", fontSize: "0.68rem", letterSpacing: "0.3em", color: "#C5A55A", marginBottom: 12 }}>
             . {uc(localizedActivity.type)} .
           </span>
@@ -122,7 +122,7 @@ export default function ActivityDetail() {
 
       {/* Key Details Bar */}
       <section style={{ background: "#F5F0E8", borderBottom: "1px solid #E8DFD0" }}>
-        <div style={{ maxWidth: 960, margin: "0 auto", padding: "24px 24px" }}>
+        <div className="px-4 sm:px-6" style={{ maxWidth: 960, margin: "0 auto" }}>
           <div className="details-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
             <DetailItem icon={<MapPin size={18} />} label={d.location} value={d.locationArea} />
             <DetailItem icon={<Clock size={18} />} label={d.duration} value={localizedActivity.duration} />
@@ -138,7 +138,7 @@ export default function ActivityDetail() {
       </section>
 
       {/* Main content */}
-      <div style={{ maxWidth: 960, margin: "0 auto", padding: "0 24px" }}>
+      <div className="px-4 sm:px-6" style={{ maxWidth: 960, margin: "0 auto" }}>
 
         {/* Image Gallery */}
         {content && content.gallery.length > 1 && (
@@ -310,7 +310,7 @@ export default function ActivityDetail() {
 
         {/* Booking CTA */}
         <section style={{ padding: "48px 0 56px" }}>
-          <div style={{ background: "#2C2416", borderRadius: 16, padding: "40px 32px", textAlign: "center", maxWidth: 720, margin: "0 auto" }}>
+          <div className="p-6 sm:p-8 md:p-10" style={{ background: "#2C2416", borderRadius: 16, textAlign: "center", maxWidth: 720, margin: "0 auto" }}>
             <h2 className="font-[family-name:var(--font-display)]" style={{ fontSize: "1.5rem", fontWeight: 600, color: "white", marginBottom: 8 }}>
               {d.bookExperience}
             </h2>

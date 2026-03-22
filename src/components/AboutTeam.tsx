@@ -55,8 +55,8 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
             return (
               <ScrollReveal key={i} delay={i * 0.08}>
                 <div
-                  className="cursor-pointer group"
-                  style={{ perspective: 800, height: 340 }}
+                  className="cursor-pointer group h-[380px] sm:h-[340px]"
+                  style={{ perspective: 800 }}
                   onClick={() => setFlipped(isFlipped ? null : i)}
                 >
                   <div

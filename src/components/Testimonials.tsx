@@ -67,7 +67,7 @@ export function Testimonials({ dict, testimonials }: TestimonialsProps) {
         </ScrollReveal>
 
         {/* Mobile: horizontal scroll, Desktop: grid */}
-        <div className="flex md:grid md:grid-cols-3 gap-6 max-w-[1100px] overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0">
+        <div className="flex md:grid md:grid-cols-3 gap-6 max-w-[1100px] mx-auto overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0">
           {testimonials.map((t, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
               <div className="min-w-[300px] md:min-w-0 snap-center p-8 px-9 rounded-[4px] border border-[rgba(201,168,76,0.15)] transition-all duration-300 hover:border-[rgba(201,168,76,0.35)] flex flex-col"
@@ -124,7 +124,7 @@ export function Testimonials({ dict, testimonials }: TestimonialsProps) {
             className="block max-w-[680px] mx-auto mt-12 mb-4 group"
           >
             <div
-              className="relative rounded-[4px] border border-gold/25 px-8 py-7 flex items-center gap-6 transition-all duration-300 hover:border-gold/50 overflow-hidden"
+              className="relative rounded-[4px] border border-gold/25 px-6 py-6 sm:px-8 sm:py-7 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 transition-all duration-300 hover:border-gold/50 overflow-hidden"
               style={{ background: "rgba(201,168,76,0.06)" }}
             >
               {/* Decorative laurel / award icon */}

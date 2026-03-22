@@ -23,9 +23,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
 
       {/* Olive branch decorative SVG — positioned top-right, semi-transparent */}
       <svg
-        className="absolute top-32 right-8 md:right-16 opacity-[0.07] pointer-events-none"
-        width="180"
-        height="320"
+        className="absolute top-32 right-8 md:right-16 opacity-[0.07] pointer-events-none w-[100px] h-[180px] sm:w-[140px] sm:h-[250px] md:w-[180px] md:h-[320px]"
         viewBox="0 0 180 320"
         fill="none"
       >

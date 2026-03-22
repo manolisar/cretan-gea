@@ -40,7 +40,7 @@ export function FAQ({ dict, faqItems }: FAQProps) {
               </button>
               <div
                 className={`overflow-hidden transition-[max-height] duration-400 ease-in-out ${
-                  openIndex === i ? "max-h-[200px]" : "max-h-0"
+                  openIndex === i ? "max-h-[500px]" : "max-h-0"
                 }`}
               >
                 <p className="pb-5 text-[0.92rem] text-muted leading-[1.7]">

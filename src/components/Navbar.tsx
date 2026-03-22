@@ -59,7 +59,7 @@ export function Navbar({ dict, locale }: NavbarProps) {
       </a>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex gap-8 items-center">
+      <div className="hidden lg:flex gap-8 items-center">
         {navLinks.map((link) => (
           <a
             key={link.href}
@@ -90,7 +90,7 @@ export function Navbar({ dict, locale }: NavbarProps) {
 
       {/* Mobile hamburger */}
       <button
-        className={`md:hidden transition-colors duration-300 ${scrolled ? "text-[#E2C87E]" : "text-white"}`}
+        className={`lg:hidden transition-colors duration-300 ${scrolled ? "text-[#E2C87E]" : "text-white"}`}
         onClick={() => setMobileOpen(!mobileOpen)}
         aria-label="Toggle menu"
       >
@@ -99,7 +99,7 @@ export function Navbar({ dict, locale }: NavbarProps) {
 
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="absolute top-full left-0 right-0 bg-[rgba(26,26,26,0.98)] backdrop-blur-[16px] border-b border-[rgba(201,168,76,0.15)] shadow-lg md:hidden">
+        <div className="absolute top-full left-0 right-0 bg-[rgba(26,26,26,0.98)] backdrop-blur-[16px] border-b border-[rgba(201,168,76,0.15)] shadow-lg lg:hidden">
           <div className="flex flex-col py-4 px-6 gap-1">
             {navLinks.map((link) => (
               <a

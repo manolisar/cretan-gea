@@ -52,7 +52,7 @@ export function Activities({ dict, locale }: ActivitiesProps) {
         <SectionHeader tag={d.tag} title={d.title} subtitle={d.subtitle} />
       </ScrollReveal>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 56, maxWidth: 1100 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 56, maxWidth: 1100 }} className="mx-auto">
         {activities.map((rawActivity, i) => {
           const activity = localizeActivity(rawActivity, locale);
           const content = contentMap[activity.id];
@@ -125,8 +125,8 @@ export function Activities({ dict, locale }: ActivitiesProps) {
                     {uc(d.activityLabel)}
                   </span>
                   <h3
-                    className="font-[family-name:var(--font-display)]"
-                    style={{ fontSize: "2.2rem", fontWeight: 500, marginBottom: 14, lineHeight: 1.15, color: "#1A1A1A" }}
+                    className="font-[family-name:var(--font-display)] text-[clamp(1.5rem,3vw,2.2rem)]"
+                    style={{ fontWeight: 500, marginBottom: 14, lineHeight: 1.15, color: "#1A1A1A" }}
                   >
                     {activity.name}
                   </h3>

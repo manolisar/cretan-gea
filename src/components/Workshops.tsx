@@ -62,7 +62,7 @@ export function Workshops({ dict, locale }: WorkshopsProps) {
         <SectionHeader tag={d.tag} title={d.title} subtitle={d.subtitle} />
       </ScrollReveal>
 
-      <div className="workshop-grid" style={{ display: "grid", gap: 20, maxWidth: 1100 }}>
+      <div className="workshop-grid mx-auto" style={{ display: "grid", gap: 20, maxWidth: 1100 }}>
         {workshops.map((rawWorkshop, i) => {
           const workshop = localizeActivity(rawWorkshop, locale);
           const content = contentMap[workshop.id];
