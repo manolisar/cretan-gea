@@ -69,7 +69,7 @@ export function Pillars({ dict, locale }: PillarsProps) {
             </svg>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/50" />
           </div>
-          <p className="font-[family-name:var(--font-sans)] text-[0.95rem] text-[#8A8075] leading-[1.7] max-w-[480px] mx-auto">
+          <p className="font-[family-name:var(--font-sans)] text-[0.95rem] text-[#6B6058] leading-[1.7] max-w-[480px] mx-auto">
             {d.sectionSubtitle}
           </p>
         </div>
@@ -258,7 +258,7 @@ function LargeCards({
 
                 <div className="mb-6">
                   <p className="text-[0.88rem] font-semibold tracking-[0.02em]" style={{ color: pillar.accentColor }}>
-                    {d.from} &euro;{activity.price} <span className="text-[#8A8075] font-normal text-[0.8rem]">/ {d.perPerson}</span>
+                    {d.from} &euro;{activity.price} <span className="text-[#6B6058] font-normal text-[0.8rem]">/ {d.perPerson}</span>
                   </p>
                   <p style={{ color: pillar.accentColor }} className="text-[0.75rem] mt-1 italic opacity-80">
                     ★ {d.kidsDiscount}

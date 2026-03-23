@@ -70,7 +70,7 @@ export function Navbar({ dict, locale }: NavbarProps) {
             href={link.href}
             className={`font-[family-name:var(--font-nav)] text-[0.7rem] font-medium tracking-[0.12em] uppercase no-underline relative transition-all duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:transition-[width] after:duration-300 hover:after:w-full ${
               scrolled
-                ? "text-[rgba(226,200,126,0.6)] hover:text-[#E2C87E] after:bg-[#C9A84C]"
+                ? "text-[#E2C87E] hover:text-[#F0DDA0] after:bg-[#E2C87E]"
                 : "text-white/90 hover:text-white after:bg-white/70"
             }`}
           >
@@ -110,7 +110,7 @@ export function Navbar({ dict, locale }: NavbarProps) {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-[family-name:var(--font-nav)] py-3 text-[0.78rem] font-medium text-[rgba(226,200,126,0.6)] tracking-[0.12em] uppercase no-underline border-b border-[rgba(201,168,76,0.1)] transition-colors duration-300 hover:text-[#E2C87E]"
+                className="font-[family-name:var(--font-nav)] py-3 text-[0.78rem] font-medium text-[#E2C87E] tracking-[0.12em] uppercase no-underline border-b border-[rgba(201,168,76,0.1)] transition-colors duration-300 hover:text-[#F0DDA0]"
               >
                 {uc(link.label)}
               </a>

@@ -17,7 +17,7 @@ export function SectionHeader({
   className = "",
   tagClassName = "text-burgundy",
   titleClassName = "",
-  subtitleClassName = "text-[#8A8075]",
+  subtitleClassName = "text-[#6B6058]",
 }: SectionHeaderProps) {
   const uc = useUC();
   return (

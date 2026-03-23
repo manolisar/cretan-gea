@@ -158,19 +158,19 @@ export function Activities({ dict, locale }: ActivitiesProps) {
                   {/* Price — burgundy accent + kids discount */}
                   <div className="mb-6">
                     <p className="text-[#6B1D2A] text-[0.88rem] font-semibold tracking-[0.02em]">
-                      {d.from} &euro;{activity.price} <span className="text-[#8A8075] font-normal text-[0.8rem]">/ {d.perPerson}</span>
+                      {d.from} &euro;{activity.price} <span className="text-[#6B6058] font-normal text-[0.8rem]">/ {d.perPerson}</span>
                     </p>
-                    <p className="text-[#C9A84C] text-[0.75rem] mt-1 italic">
+                    <p className="text-[#8B7332] text-[0.75rem] mt-1 italic">
                       ★ {d.kidsDiscount}
                     </p>
-                    <p className="text-[#C9A84C] text-[0.75rem] mt-0.5 italic">
+                    <p className="text-[#8B7332] text-[0.75rem] mt-0.5 italic">
                       ★ {d.toddlersFree}
                     </p>
                   </div>
 
                   {/* Discover link */}
                   <span
-                    className="font-[family-name:var(--font-nav)] inline-flex items-center gap-2 text-[#C9A84C] text-[0.75rem] font-semibold tracking-[0.12em] uppercase group-hover:gap-3 transition-all duration-300"
+                    className="font-[family-name:var(--font-nav)] inline-flex items-center gap-2 text-[#7A6528] text-[0.75rem] font-semibold tracking-[0.12em] uppercase group-hover:gap-3 transition-all duration-300"
                   >
                     {uc(d.learnMore)}
                     <ArrowRight size={15} className="transition-transform duration-300" />
