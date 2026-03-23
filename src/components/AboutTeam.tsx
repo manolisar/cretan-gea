@@ -55,7 +55,7 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
             return (
               <ScrollReveal key={i} delay={i * 0.08} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                 <div
-                  className="cursor-pointer group h-[380px] sm:h-[340px]"
+                  className="cursor-pointer group h-[400px] sm:h-[370px]"
                   style={{ perspective: 800 }}
                   onClick={() => setFlipped(isFlipped ? null : i)}
                 >
@@ -98,7 +98,7 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
 
                     {/* Back — bio */}
                     <div
-                      className="absolute inset-0 rounded-lg flex flex-col items-center justify-center text-center p-8"
+                      className="absolute inset-0 rounded-lg flex flex-col items-center justify-center text-center p-6"
                       style={{
                         backfaceVisibility: "hidden",
                         transform: "rotateY(180deg)",
@@ -106,10 +106,10 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
                         color: "#FAF8F4",
                       }}
                     >
-                      <h3 className="font-[family-name:var(--font-display)] text-[1.2rem] font-semibold mb-4">
+                      <h3 className="font-[family-name:var(--font-display)] text-[1.1rem] font-semibold mb-3">
                         {member.name}
                       </h3>
-                      <p className="text-[0.85rem] leading-[1.7] opacity-90">
+                      <p className="text-[0.8rem] leading-[1.65] opacity-90">
                         {member.bio}
                       </p>
                     </div>
