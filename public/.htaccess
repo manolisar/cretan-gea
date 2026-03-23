@@ -1,0 +1,47 @@
+Options -MultiViews
+RewriteEngine On
+
+# ---------------------------------------------------------------
+# 301 Redirects — old WordPress URLs → new site
+# ---------------------------------------------------------------
+
+RewriteRule ^cretan-gea-activities-workshops/?$ /en/#experiences [R=301,L]
+RewriteRule ^cretan-gea-activities-cooking/?$   /en/activities/cooking [R=301,L]
+RewriteRule ^cretan-gea-activities-ceramics/?$  /en/activities/ceramics [R=301,L]
+RewriteRule ^cretan-gea-workshops-olive/?$      /en/activities/olive-oil [R=301,L]
+RewriteRule ^cretan-gea-workshops-vineyard/?$   /en/activities/vineyard [R=301,L]
+RewriteRule ^cretan-gea-workshops-cretan-cheese/?$ /en/activities/cheese [R=301,L]
+RewriteRule ^cretan-gea-workshops-soap/?$       /en/activities/soap [R=301,L]
+RewriteRule ^cretan-gea-workshops-sweets/?$     /en/activities/sweets [R=301,L]
+RewriteRule ^cretan-gea-workshops-sfakianpie/?$ /en/activities/sfakian-pie [R=301,L]
+RewriteRule ^cretan-gea-workshops-greens/?$     /en/activities/greens [R=301,L]
+RewriteRule ^cretan-gea-workshops-wheat/?$      /en/activities/wheat [R=301,L]
+RewriteRule ^cretan-gea-workshops-honey/?$      /en/activities/honey [R=301,L]
+RewriteRule ^cretan-gea-gallery/?$              /en/#gallery [R=301,L]
+RewriteRule ^cretan-gea-contact/?$              /en/#contact [R=301,L]
+RewriteRule ^about-cretan-gea/?$               /en/ [R=301,L]
+
+# Old Greek locale pages
+RewriteRule ^el/cretan-gea-activities-cooking/?$      /gr/activities/cooking [R=301,L]
+RewriteRule ^el/cretan-gea-activities-ceramics/?$     /gr/activities/ceramics [R=301,L]
+RewriteRule ^el/cretan-gea-workshops-olive/?$         /gr/activities/olive-oil [R=301,L]
+RewriteRule ^el/cretan-gea-workshops-vineyard/?$      /gr/activities/vineyard [R=301,L]
+RewriteRule ^el/cretan-gea-workshops-cretan-cheese/?$ /gr/activities/cheese [R=301,L]
+RewriteRule ^el/cretan-gea-workshops-soap/?$          /gr/activities/soap [R=301,L]
+RewriteRule ^el/cretan-gea-workshops-sweets/?$        /gr/activities/sweets [R=301,L]
+RewriteRule ^el/cretan-gea-workshops-sfakianpie/?$    /gr/activities/sfakian-pie [R=301,L]
+RewriteRule ^el/cretan-gea-workshops-greens/?$        /gr/activities/greens [R=301,L]
+RewriteRule ^el/cretan-gea-workshops-wheat/?$         /gr/activities/wheat [R=301,L]
+RewriteRule ^el/cretan-gea-workshops-honey/?$         /gr/activities/honey [R=301,L]
+RewriteRule ^el/about-cretan-gea/?$                   /gr/ [R=301,L]
+
+# WooCommerce/system pages → home
+RewriteRule ^(shop|cart|checkout.*|my-account.*|to_book.*)/?$ /en/ [R=301,L]
+
+# ---------------------------------------------------------------
+# SPA fallback — serve index.html for all React routes
+# ---------------------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]

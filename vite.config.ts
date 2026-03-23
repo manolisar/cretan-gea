@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  base: "/cretan-gea/",
+  base: process.env.GITHUB_PAGES ? "/cretan-gea/" : "/",
   plugins: [tailwindcss(), react()],
   resolve: {
     alias: {
