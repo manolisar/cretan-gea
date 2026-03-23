@@ -25,8 +25,8 @@ export function OurStory({ dict }: OurStoryProps) {
             {/* Image container */}
             <div className="relative overflow-hidden" style={{ zIndex: 1 }}>
               <img
-                src={asset("/images/cooking-1-1.webp")}
-                alt="Cretan Gea — Cooking experience with guests"
+                src={asset("/images/our-story.webp")}
+                alt="Cretan Gea — Still life with traditional Cretan ingredients"
                 className="w-full h-auto object-cover"
                 style={{ minHeight: "clamp(250px, 40vw, 400px)", maxHeight: 560 }}
               />

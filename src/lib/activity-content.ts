@@ -22,18 +22,22 @@ export interface ActivityContent {
 export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
   cooking: {
     subtitle: "A Journey Through Centuries of Cretan Food History",
-    heroImage: asset("/images/Cooking-21.png"),
+    heroImage: asset("/images/cooking-hero.webp"),
     gallery: [
       {
-        src: asset("/images/Cooking-21.png"),
+        src: asset("/images/cooking-hero.webp"),
         alt: "Cretan cooking class at Cretan Gea",
       },
       {
-        src: asset("/images/IMG_7049-copy-1.png"),
+        src: asset("/images/cooking-gallery-1.webp"),
         alt: "Traditional cooking experience",
       },
       {
-        src: asset("/images/2L1A7095-scaled-1.png"),
+        src: asset("/images/cooking-gallery-2.webp"),
+        alt: "Preparing dishes over open fire",
+      },
+      {
+        src: asset("/images/cooking-gallery-3.webp"),
         alt: "Outdoor Cretan cooking in the countryside",
       },
     ],
@@ -170,10 +174,10 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
 
   "olive-oil": {
     subtitle: "Discover the Secrets of the Cretan Land!",
-    heroImage: asset("/images/1736598868263-1.png"),
+    heroImage: asset("/images/1736598868263-1.webp"),
     gallery: [
       {
-        src: asset("/images/1736598868263-1.png"),
+        src: asset("/images/1736598868263-1.webp"),
         alt: "Cretan olive oil workshop",
       },
     ],
@@ -210,20 +214,34 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
   },
 
   vineyard: {
-    subtitle: "Explore Cretan Vineyards and Winemaking",
-    heroImage: asset("/images/grapes.jpg"),
+    subtitle: "Discover the Treasures of the Cretan Vineyard!",
+    heroImage: asset("/images/grapes.webp"),
     gallery: [
       {
-        src: asset("/images/grapes.jpg"),
+        src: asset("/images/grapes.webp"),
         alt: "Cretan grapes on the vine",
       },
       {
-        src: asset("/images/c18.jpg"),
+        src: asset("/images/c18.webp"),
         alt: "Vineyard landscape in Crete",
       },
     ],
     description: [
-      "Explore Cretan vineyards and learn about traditional winemaking techniques that have been perfected over millennia on the island of Crete.",
+      "We invite you on an exciting experience full of aromas and flavors, in the world of the Cretan vine!",
+    ],
+    highlights: [
+      "Explore our family vineyard and admire the grape varieties we cultivate.",
+      "Learn about the history and tradition of viticulture in Crete.",
+      "Participate in a live demonstration of grape harvesting and wine production (Harvest season: September - August).",
+      "Enjoy a tasting of various wine varieties and other vine products, such as tsipouro, moustalevria and petimezi.",
+    ],
+    reasons: [
+      "Experience an authentic agritourism experience.",
+      "Discover the secrets of traditional winemaking.",
+      "Prepare petimezi from must and taste it with traditional pancakes.",
+      "Enjoy the unique flavors of Cretan wines.",
+      "Support local products and producers.",
+      "Create unforgettable memories.",
     ],
     importantInfo: [
       { label: "Operation", text: "Our program operates year-round and people of all ages can participate." },
@@ -233,7 +251,7 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
   },
 
   cheese: {
-    subtitle: "The Art of Traditional Cretan Cheese-Making",
+    subtitle: "Discover the Secrets of Cretan Cheese!",
     heroImage: asset("/images/Turi-copy-scaled.webp"),
     gallery: [
       {
@@ -241,16 +259,28 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
         alt: "Traditional Cretan cheese",
       },
       {
-        src: asset("/images/IMG_7609-769x1024.jpg"),
+        src: asset("/images/IMG_7609-769x1024.webp"),
         alt: "Cheese-making workshop at Cretan Gea",
       },
       {
-        src: asset("/images/IMG_7611-768x1024.jpg"),
+        src: asset("/images/IMG_7611-768x1024.webp"),
         alt: "Hands-on cheese production experience",
       },
     ],
     description: [
-      "Learn the art of making traditional Cretan cheeses from local milk, following methods passed down through generations of Cretan shepherds and farmers.",
+      "We invite you on a journey of taste and knowledge into the world of Cretan traditional dairy products and traditional cheeses!",
+    ],
+    highlights: [
+      "Observe the milking process and learn about the importance of fresh milk in quality cheese production.",
+      "Participate in a cheesemaking workshop where you will make your own cheese and yogurt.",
+      "Enjoy a tasting of various Cretan cheeses accompanied by local products and the traditional Cretan treat \"Joy (Hara)\" — gruyere with thyme honey.",
+    ],
+    reasons: [
+      "Experience an authentic agritourism experience.",
+      "Discover the secrets of traditional cheesemaking.",
+      "Enjoy the unique flavors of Cretan cheeses.",
+      "Support local products and producers.",
+      "Create unforgettable memories.",
     ],
     importantInfo: [
       { label: "Operation", text: "Our program operates year-round and people of all ages can participate." },
@@ -260,20 +290,31 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
   },
 
   honey: {
-    subtitle: "The Golden Treasure of Cretan Mountains",
-    heroImage: asset("/images/1736599008832.jpg"),
+    subtitle: "Discover and Taste Cretan Thyme Honey",
+    heroImage: asset("/images/1736599008832.webp"),
     gallery: [
       {
-        src: asset("/images/1736599008832.jpg"),
+        src: asset("/images/1736599008832.webp"),
         alt: "Cretan honey workshop",
       },
       {
-        src: asset("/images/1736600704081.jpeg"),
+        src: asset("/images/1736600704081.webp"),
         alt: "Honey production in Crete",
       },
     ],
     description: [
-      "Experience beekeeping and the production of Crete's famous thyme honey. Discover how the unique flora of the Cretan mountains creates one of the world's finest honeys.",
+      "In the heart of Apokoronas, in the picturesque village of Xirosterni, a unique experience awaits that will introduce you to the honey from the aromatic herbs of Crete.",
+    ],
+    highlights: [
+      "Visit a traditional apiary and learn up close about the life of bees.",
+      "Enjoy a unique tasting experience, sampling various Cretan honey varieties (thyme, pine, reiki, arbutus).",
+      "Participate in a beeswax cream production workshop from natural beeswax.",
+    ],
+    reasons: [
+      "Authenticity: Products are 100% natural and pure.",
+      "Quality: The honey is distinguished by its high quality.",
+      "Experiential experience.",
+      "Sustainability.",
     ],
     importantInfo: [
       { label: "Operation", text: "Our program operates year-round and people of all ages can participate." },
@@ -283,47 +324,64 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
   },
 
   soap: {
-    subtitle: "Handcrafted with Pure Cretan Olive Oil",
-    heroImage: asset("/images/SAPOYNI-2-769x1024-1.jpeg"),
+    subtitle: "Make Your Own Soap from Pure Cretan Olive Oil!",
+    heroImage: asset("/images/SAPOYNI-2-769x1024-1.webp"),
     gallery: [
       {
-        src: asset("/images/SAPOYNI-2-769x1024-1.jpeg"),
+        src: asset("/images/SAPOYNI-2-769x1024-1.webp"),
         alt: "Handmade Cretan olive oil soap",
       },
       {
-        src: asset("/images/sapoyni-4.jpeg"),
+        src: asset("/images/sapoyni-4.webp"),
         alt: "Natural soap bars",
       },
       {
-        src: asset("/images/SAPOYNI-1024x576-1.jpeg"),
+        src: asset("/images/SAPOYNI-1024x576-1.webp"),
         alt: "Soap-making workshop at Cretan Gea",
       },
     ],
     description: [
-      "Create natural olive oil soaps using traditional Cretan methods. Learn the art of soap-making with pure local ingredients and take home your own handcrafted creations.",
+      "We invite you on a unique journey into the world of aromas and nature, in the heart of Apokoronas. We will reveal the secrets of traditional soap-making with the recipe from our mother and grandmother. We will add color to our life and our soap!",
+    ],
+    reasons: [
+      "We use only natural and organic ingredients.",
+      "Our team consists of experienced animators-guides.",
+      "You will enjoy a fun and creative experience.",
     ],
     importantInfo: [
-      { label: "Operation", text: "Our program operates year-round and people of all ages can participate." },
+      { label: "Operation", text: "Year-round. Soap dries more easily in summer; requires three months to mature before use." },
       { label: "Reservation", text: "At least 4 days in advance." },
       { label: "Cancellation", text: "At least 4 days before the workshop." },
     ],
   },
 
   sweets: {
-    subtitle: "Traditional Cretan Fruit Preserves & Spoon Sweets",
-    heroImage: asset("/images/spoon-sweets-2-768x1024-1.jpg"),
+    subtitle: "Discover the Secrets of Cretan Spoon Sweets!",
+    heroImage: asset("/images/spoon-sweets-2-768x1024-1.webp"),
     gallery: [
       {
-        src: asset("/images/spoon-sweets-2-768x1024-1.jpg"),
+        src: asset("/images/spoon-sweets-2-768x1024-1.webp"),
         alt: "Traditional Cretan spoon sweets",
       },
       {
-        src: asset("/images/sfakiani-pita-12-1024x768-1.jpg"),
+        src: asset("/images/sfakiani-pita-12-1024x768-1.webp"),
         alt: "Traditional Cretan sweets workshop",
       },
     ],
     description: [
-      "Make traditional Cretan fruit preserves and spoon sweets, a beloved tradition of Cretan hospitality offered to every guest who visits a Cretan home.",
+      "We invite you on a sweet journey of taste and tradition! At Cretan Gea, in the picturesque village of Xirosterni in Apokoronas, a unique experience awaits you!",
+    ],
+    highlights: [
+      "Learn about the history and tradition of spoon sweets in Crete.",
+      "Participate in a spoon sweet making workshop, learning all the secrets of the process.",
+      "Enjoy the sweets we made, accompanied by local yogurt and a drink.",
+    ],
+    reasons: [
+      "Experience an authentic agritourism experience.",
+      "Discover the secrets of traditional confectionery with seasonal fruit from our garden.",
+      "Enjoy our treat with the unique flavors of Cretan spoon sweets accompanied by yogurt.",
+      "Support local products and producers.",
+      "Create unforgettable memories.",
     ],
     importantInfo: [
       { label: "Operation", text: "Our program operates year-round and people of all ages can participate." },
@@ -333,77 +391,120 @@ export const ACTIVITY_CONTENT: Record<string, ActivityContent> = {
   },
 
   "sfakian-pie": {
-    subtitle: "Master the Famous Sfakian Cheese Pie",
-    heroImage: asset("/images/sfakiani-pita-8-768x1024-1.jpg"),
+    subtitle: "Discover the Secrets of the Authentic Sfakian Pie!",
+    heroImage: asset("/images/sfakian-pie-hero.webp"),
     gallery: [
       {
-        src: asset("/images/sfakiani-pita-8-768x1024-1.jpg"),
+        src: asset("/images/sfakian-pie-hero.webp"),
         alt: "Traditional Sfakian cheese pie",
       },
       {
-        src: asset("/images/sfakiani-pita-9-768x1024-1.jpg"),
+        src: asset("/images/sfakian-pie-gallery-1.webp"),
         alt: "Sfakian pie being prepared",
       },
       {
-        src: asset("/images/IMG_0873-768x1024-1.jpg"),
+        src: asset("/images/sfakian-pie-gallery-2.webp"),
+        alt: "Hands-on Sfakian pie making",
+      },
+      {
+        src: asset("/images/sfakian-pie-gallery-3.webp"),
         alt: "Sfakian pie workshop at Cretan Gea",
       },
     ],
     description: [
-      "Master the art of making the famous Sfakian cheese pie — a thin, delicate pastry filled with local mizithra cheese, drizzled with honey. A true taste of the Sfakia mountain region.",
+      "We invite you on a unique journey of taste and tradition in the heart of Crete, in the picturesque village of Xirosterni. At Cretan Gea, you will have the opportunity to learn the secrets of making the authentic Sfakian pie, one of the most beloved traditional sweets of the island and especially of Western Crete.",
+    ],
+    highlights: [
+      "The secrets of the dough — patience and skill to achieve a soft and pliable texture.",
+      "Filling with Chania mizithra and fragrant thyme honey.",
+      "Shaping and baking — baking on a clay plate over a wood fire without oil.",
+      "At the end, you will taste a warm, freshly baked Sfakian pie, made by your own hands, accompanied by local raki!",
+    ],
+    reasons: [
+      "You will live an authentic experience, learning about the traditions of Cretan cuisine.",
+      "We use only local, pure products to offer you the most authentic taste.",
+      "Our experienced team members will guide you at every step with patience and attention to detail.",
+      "You will have a wonderful time, learning and creating a delicious unique delicacy.",
     ],
     importantInfo: [
-      { label: "Operation", text: "Our program operates year-round and people of all ages can participate." },
+      { label: "Operation", text: "Throughout the year as the preparation of Sfakian Pie is not seasonal." },
       { label: "Reservation", text: "At least 4 days in advance." },
       { label: "Cancellation", text: "At least 4 days before the workshop." },
     ],
   },
 
   greens: {
-    subtitle: "Forage & Cook Wild Herbs from the Cretan Countryside",
-    heroImage: asset("/images/1736598868245.jpg"),
+    subtitle: "Discover the Hidden Treasures of Cretan Nature!",
+    heroImage: asset("/images/1736598868245.webp"),
     gallery: [
       {
-        src: asset("/images/1736598868245.jpg"),
+        src: asset("/images/1736598868245.webp"),
         alt: "Wild greens and herbs from Crete",
       },
       {
-        src: asset("/images/IMG_7610-769x1024.jpg"),
+        src: asset("/images/IMG_7610-769x1024.webp"),
         alt: "Foraging wild greens workshop",
       },
       {
-        src: asset("/images/IMG_20220410_152740-2048x1961-1.jpg"),
+        src: asset("/images/IMG_20220410_152740-2048x1961-1.webp"),
         alt: "Edible wild greens from the Cretan countryside",
       },
     ],
     description: [
-      "Forage and cook with wild herbs and greens from the Cretan countryside. Discover the incredible biodiversity of Crete's flora and learn which plants are edible, medicinal, and delicious.",
+      "We invite you on a unique journey of discovery in nature, in the enchanting landscapes of Apokoronas.",
+    ],
+    highlights: [
+      "We will go out together on a walk in nature, and collect the greens we will identify.",
+      "With the greens we collect, we will prepare together traditional Cretan recipes — stir-fried greens with white lemon sauce, pies, and salads.",
+      "We will have the opportunity to taste the dishes we make.",
+    ],
+    reasons: [
+      "Knowledge and experience.",
+      "Contact with nature.",
+      "Healthy eating.",
+      "Unique experience.",
     ],
     importantInfo: [
-      { label: "Operation", text: "Our program operates year-round and people of all ages can participate." },
+      { label: "Operation", text: "Throughout winter, depending on weather conditions and rainfall." },
       { label: "Reservation", text: "At least 4 days in advance." },
       { label: "Cancellation", text: "At least 4 days before the workshop." },
     ],
   },
 
   wheat: {
-    subtitle: "From Field to Traditional Cretan Bread",
-    heroImage: asset("/images/the-wheat-cycled-4-scaled-1.jpg"),
+    subtitle: "Discover the Secrets of Wheat!",
+    heroImage: asset("/images/wheat-hero.webp"),
     gallery: [
       {
-        src: asset("/images/the-wheat-cycled-4-scaled-1.jpg"),
+        src: asset("/images/wheat-hero.webp"),
         alt: "The wheat cycle workshop at Cretan Gea",
       },
       {
-        src: asset("/images/the-wheat-cycled-5-scaled-1.jpg"),
+        src: asset("/images/wheat-gallery-1.webp"),
         alt: "Traditional wheat threshing and bread-making",
+      },
+      {
+        src: asset("/images/wheat-gallery-2.webp"),
+        alt: "Wheat processing at Cretan Gea",
       },
     ],
     description: [
-      "Follow the journey of wheat from field to traditional Cretan bread. Experience the full cycle — harvesting, threshing on our ancient threshing floor, grinding, and baking bread in a wood-fired oven.",
+      "We invite you on a journey of knowledge and taste at Cretan Gea. You will have the opportunity to learn up close the life cycle of wheat, one of the most important agricultural products of Crete.",
+    ],
+    highlights: [
+      "From wheat to flour: We will use a traditional stone hand mill, a family heirloom, and observe the process of transforming wheat into flour.",
+      "After grinding the wheat, we make trahana with milk, or trahana with eggplant in a pot, or traditional bread in a wood-fired oven.",
+      "We will enjoy our freshly baked bread, accompanied by local olive products with sea salt and thyme and edible olives.",
+      "At the end of the workshop, you will have in your hands a freshly baked loaf of bread that you made yourself!",
+    ],
+    reasons: [
+      "Knowledge and experience: You will gain knowledge about how wheat was used in Crete.",
+      "Contact with nature: Connect with the estate's historic threshing floor where for centuries the family cultivated and created its own flour.",
+      "Healthy eating: Learn about the benefits of whole wheat and enjoy a healthy and delicious experience.",
+      "Unique experience: Learn about handmade bread kneading and Cretan food traditions.",
     ],
     importantInfo: [
-      { label: "Operation", text: "Our program operates year-round and people of all ages can participate." },
+      { label: "Operation", text: "Throughout the year as bread-making is not seasonal." },
       { label: "Reservation", text: "At least 4 days in advance." },
       { label: "Cancellation", text: "At least 4 days before the workshop." },
     ],

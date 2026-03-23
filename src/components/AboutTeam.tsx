@@ -7,10 +7,10 @@ import type { Dictionary } from "@/lib/i18n/en";
 
 /* Photo path + earthy back-card color per member (order must match dictionary) */
 const MEMBER_DATA = [
-  { photo: asset("/images/team-eleni.jpg"), color: "#6B1D2A" },      // Eleni — burgundy
+  { photo: asset("/images/team-eleni.webp"), color: "#6B1D2A" },      // Eleni — burgundy
   { photo: asset("/images/team-maria.webp"), color: "#8B7332" },     // Maria — gold-dark
-  { photo: asset("/images/team-stamatis.jpg"), color: "#4A0E1A" },   // Stamatis — burgundy deep
-  { photo: asset("/images/team-marianda.jpg"), color: "#C9A84C" },   // Marianda — gold
+  { photo: asset("/images/team-stamatis.webp"), color: "#4A0E1A" },   // Stamatis — burgundy deep
+  { photo: asset("/images/team-marianda.webp"), color: "#C9A84C" },   // Marianda — gold
   { photo: asset("/images/team-aggelina.webp"), color: "#6B1D2A" },  // Aggelina — burgundy
 ];
 
@@ -37,7 +37,7 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
             <div className="relative">
               <div className="absolute -top-3 -right-3 w-full h-full border border-gold/30 pointer-events-none" style={{ zIndex: 0 }} />
               <img
-                src={asset("/images/About-us-Photo22.12.25.png")}
+                src={asset("/images/team-group.webp")}
                 alt="The Cretan Gea Team"
                 className="relative w-full h-auto object-cover shadow-lg"
                 style={{ zIndex: 1, maxHeight: 400 }}
@@ -47,13 +47,13 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
         </ScrollReveal>
 
         {/* Team members — flip cards with photos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {t.members.map((member, i) => {
             const data = MEMBER_DATA[i] || MEMBER_DATA[0];
             const isFlipped = flipped === i;
 
             return (
-              <ScrollReveal key={i} delay={i * 0.08}>
+              <ScrollReveal key={i} delay={i * 0.08} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                 <div
                   className="cursor-pointer group h-[380px] sm:h-[340px]"
                   style={{ perspective: 800 }}
@@ -87,12 +87,9 @@ export function AboutTeam({ dict }: { dict: Dictionary }) {
                           style={{ filter: "sepia(0.15) saturate(0.9)" }}
                         />
                       </div>
-                      <h3 className="font-[family-name:var(--font-display)] text-[1.3rem] font-semibold text-[#1A1A1A] mb-1">
+                      <h3 className="font-[family-name:var(--font-display)] text-[1.3rem] font-semibold text-[#1A1A1A] mb-4">
                         {member.name}
                       </h3>
-                      <p className="font-[family-name:var(--font-nav)] uppercase text-[0.62rem] tracking-[0.2em] text-[#C9A84C] mb-3">
-                        {uc(member.role)}
-                      </p>
                       {/* Hint to flip */}
                       <span className="text-[0.65rem] text-[rgba(201,168,76,0.4)] italic transition-colors duration-300 group-hover:text-[rgba(201,168,76,0.7)]">
                         &#x21bb;

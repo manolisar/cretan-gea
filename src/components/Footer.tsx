@@ -23,13 +23,22 @@ export function Footer({ dict, locale }: FooterProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.2fr] gap-12 max-w-[1100px] mb-10">
         {/* Brand */}
         <div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={IMAGES.logo}
-            alt="Cretan Gea"
-            className="h-11 mb-4"
-            style={{ filter: "drop-shadow(0 0 4px rgba(239,175,53,0.4)) drop-shadow(0 0 8px rgba(201,168,76,0.2))" }}
-          />
+          <div
+            className="flex items-center justify-center rounded-full border border-[rgba(201,168,76,0.3)] mb-4"
+            style={{
+              width: 52,
+              height: 52,
+              background: "rgba(26,26,26,0.6)",
+              padding: 6,
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={IMAGES.logo}
+              alt="Cretan Gea"
+              className="w-full h-full object-contain"
+            />
+          </div>
           <p className="text-[0.88rem] leading-[1.7] max-w-[280px]">
             {d.brandDescription}
           </p>

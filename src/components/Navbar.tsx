@@ -41,19 +41,24 @@ export function Navbar({ dict, locale }: NavbarProps) {
           : "py-5 px-6 md:px-12 bg-transparent border-b border-transparent"
       }`}
     >
-      <a href={routeHref(`/${locale}`)}>
+      <a
+        href={routeHref(`/${locale}`)}
+        className="transition-all duration-300 flex items-center justify-center rounded-full border border-[rgba(201,168,76,0.35)] hover:border-[rgba(201,168,76,0.6)]"
+        style={{
+          width: scrolled ? 52 : 68,
+          height: scrolled ? 52 : 68,
+          background: scrolled
+            ? "rgba(26,26,26,0.85)"
+            : "rgba(26,26,26,0.45)",
+          backdropFilter: "blur(8px)",
+          padding: scrolled ? 6 : 8,
+        }}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={IMAGES.logo}
           alt="Cretan Gea Logo"
-          className="transition-all duration-300"
-          style={{
-            height: scrolled ? 48 : 64,
-            width: "auto",
-            filter: scrolled
-              ? "drop-shadow(0 0 4px rgba(239,175,53,0.4)) drop-shadow(0 0 8px rgba(201,168,76,0.2))"
-              : "drop-shadow(0 0 6px rgba(239,175,53,0.5)) drop-shadow(0 0 12px rgba(201,168,76,0.25)) drop-shadow(0 1px 4px rgba(0,0,0,0.3))",
-          }}
+          className="transition-all duration-300 w-full h-full object-contain"
         />
       </a>
 

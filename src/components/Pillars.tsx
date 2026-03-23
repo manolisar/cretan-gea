@@ -54,7 +54,25 @@ export function Pillars({ dict, locale }: PillarsProps) {
   return (
     <section id="experiences" className="py-24 px-6 md:px-12 bg-warm-white paper-grain">
       <ScrollReveal>
-        <SectionHeader tag={d.sectionTag} title={d.sectionTitle} subtitle={d.sectionSubtitle} />
+        <div className="max-w-[700px] mx-auto text-center mb-20">
+          <span className="font-[family-name:var(--font-nav)] inline-block text-[0.68rem] tracking-[0.3em] uppercase text-burgundy mb-4">
+            {uc(d.sectionTag)}
+          </span>
+          <h2 className="font-[family-name:var(--font-display)] text-[clamp(2rem,3.5vw,3rem)] font-normal leading-[1.2] mb-5 text-[#1A1A1A]">
+            {d.sectionTitle}
+          </h2>
+          {/* Decorative flourish */}
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold/50" />
+            <svg width="20" height="20" viewBox="0 0 20 20" className="text-gold opacity-50">
+              <path d="M10 2 L12 8 L18 10 L12 12 L10 18 L8 12 L2 10 L8 8 Z" fill="currentColor" />
+            </svg>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/50" />
+          </div>
+          <p className="font-[family-name:var(--font-sans)] text-[0.95rem] text-[#8A8075] leading-[1.7] max-w-[480px] mx-auto">
+            {d.sectionSubtitle}
+          </p>
+        </div>
       </ScrollReveal>
 
       {PILLARS.map((pillar, pillarIndex) => {

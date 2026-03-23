@@ -11,7 +11,7 @@ export interface RecipeContent {
 
 export const RECIPE_CONTENT: Record<string, RecipeContent> = {
   "dakos-salad": {
-    heroImage: asset("/images/dakos-hero.jpg"),
+    heroImage: asset("/images/dakos-hero.webp"),
     introduction: [
       "Dakos is one of the most iconic dishes of Cretan cuisine, dating back centuries to a time when barley was the primary grain of the island. The twice-baked barley rusk — paximadi — was the staple bread of Cretan shepherds and farmers; it could be stored for months without spoiling, making it ideal for the rugged mountain lifestyle.",
       "Today, dakos is served in every taverna across Crete and is considered a symbol of the Cretan Mediterranean diet, renowned worldwide for its health benefits. It is the perfect summer dish — make it only when tomatoes are at their peak ripeness.",
@@ -63,7 +63,7 @@ export const RECIPE_CONTENT: Record<string, RecipeContent> = {
   },
 
   "sfakian-pie": {
-    heroImage: asset("/images/sfakiani-pita-hero.jpg"),
+    heroImage: asset("/images/sfakiani-pita-hero.webp"),
     introduction: [
       "Sfakianopita originates from the remote, mountainous region of Sfakia in southern Chania — a region famous for its fierce independence and proud pastoral traditions. Historically known as 'plakopites', these pies were cooked on a flat stone over an open fire by shepherds in the White Mountains.",
       "The dish is so culturally significant that it has been submitted for UNESCO Intangible Cultural Heritage recognition. It represents the ingenious simplicity of Cretan mountain cooking — few ingredients, no oven needed, extraordinary flavour.",
@@ -131,7 +131,7 @@ export const RECIPE_CONTENT: Record<string, RecipeContent> = {
   },
 
   tsigariasto: {
-    heroImage: asset("/images/tsigariasto-hero.jpg"),
+    heroImage: asset("/images/tsigariasto-hero.webp"),
     introduction: [
       "Tsigariasto is one of the most ancient and beloved dishes from the mountains of Crete, particularly the Sfakia region. The name comes from the Greek word 'tsigara' (to sizzle), describing the initial high-heat searing that gives the meat its distinctive caramelized crust before slow braising.",
       "This is the quintessential shepherd's dish — made with a handful of ingredients in a single pot over a fire, using the freshest lamb or goat from the flock. Its profound depth of flavour from so few ingredients embodies the philosophy of Cretan cuisine: let exceptional ingredients speak for themselves.",

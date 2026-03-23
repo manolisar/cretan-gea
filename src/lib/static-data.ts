@@ -52,7 +52,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
     price: 120,
     capacity: 12,
     duration: "4-5 hours",
-    imageUrl: asset("/images/cooking-1-1.webp"),
+    imageUrl: asset("/images/activities/cooking.webp"),
   },
   {
     id: "ceramics",
@@ -73,7 +73,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
     price: 60,
     capacity: 10,
     duration: "1.5-3 hours",
-    imageUrl: asset("/images/Activities-Olives-Hero.webp"),
+    imageUrl: asset("/images/activities/olive-oil.webp"),
   },
   {
     id: "vineyard",
@@ -83,7 +83,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
     price: 60,
     capacity: 10,
     duration: "1.5-3 hours",
-    imageUrl: asset("/images/grapes.jpg"),
+    imageUrl: asset("/images/grapes.webp"),
   },
   {
     id: "cheese",
@@ -93,7 +93,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
     price: 60,
     capacity: 10,
     duration: "1.5-3 hours",
-    imageUrl: asset("/images/c18.jpg"),
+    imageUrl: asset("/images/c18.webp"),
   },
   {
     id: "honey",
@@ -103,7 +103,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
     price: 55,
     capacity: 10,
     duration: "1.5-3 hours",
-    imageUrl: asset("/images/MELI-872x1024-1.jpeg"),
+    imageUrl: asset("/images/MELI-872x1024-1.webp"),
   },
   {
     id: "soap",
@@ -113,7 +113,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
     price: 50,
     capacity: 10,
     duration: "1.5-3 hours",
-    imageUrl: asset("/images/sapouni-me-eleolado-3-1.jpg"),
+    imageUrl: asset("/images/sapouni-me-eleolado-3-1.webp"),
   },
   {
     id: "sweets",
@@ -123,7 +123,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
     price: 55,
     capacity: 10,
     duration: "1.5-3 hours",
-    imageUrl: asset("/images/spoon-sweets-2-768x1024-1.jpg"),
+    imageUrl: asset("/images/spoon-sweets-2-768x1024-1.webp"),
   },
   {
     id: "sfakian-pie",
@@ -133,7 +133,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
     price: 55,
     capacity: 10,
     duration: "1.5-3 hours",
-    imageUrl: asset("/images/sfakiani-pita-8-768x1024-1.jpg"),
+    imageUrl: asset("/images/activities/sfakian-pie.webp"),
   },
   {
     id: "greens",
@@ -143,7 +143,7 @@ export const STATIC_ACTIVITIES: Activity[] = [
     price: 55,
     capacity: 10,
     duration: "1.5-3 hours",
-    imageUrl: asset("/images/XORTA-4.jpg"),
+    imageUrl: asset("/images/XORTA-4.webp"),
   },
   {
     id: "wheat",
@@ -153,6 +153,6 @@ export const STATIC_ACTIVITIES: Activity[] = [
     price: 55,
     capacity: 10,
     duration: "1.5-3 hours",
-    imageUrl: asset("/images/the-wheat-cycled-1-scaled-2.jpg"),
+    imageUrl: asset("/images/activities/wheat-cycle.webp"),
   },
 ];
